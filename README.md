@@ -1,4 +1,4 @@
-# RAHBAR
+# RAHBAR - rahbar-rag-kubernetes
 
 [![CI](https://github.com/Bilalmughal-07/rahbar-rag-kubernetes/actions/workflows/ci.yml/badge.svg)](https://github.com/Bilalmughal-07/rahbar-rag-kubernetes/actions/workflows/ci.yml)
 
