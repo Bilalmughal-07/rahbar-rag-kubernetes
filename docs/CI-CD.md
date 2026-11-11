@@ -106,3 +106,9 @@ blocking force-pushes and direct pushes.
 The earlier no-dev/no-Actions observations describe the initial audit.
 See [submission status](SUBMISSION-STATUS.md) for subsequent authorized commits,
 actual CI links, fresh verification and remaining approval/owner requirements.
+
+Real CI also exposed a removed nested setup-trivy@v0.2.1 dependency in the
+older v0.28.0 action. The workflow now pins official trivy-action v0.36.0 at
+ed142fd0673e97e23eac54620cfb913e5ce36c25. Its pinned setup/cache dependencies
+and default Trivy v0.70.0 release were verified through the official repositories.
+All three HIGH/CRITICAL, ignore-unfixed and exit-code gates remain unchanged.
