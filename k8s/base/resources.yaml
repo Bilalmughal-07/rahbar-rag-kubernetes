@@ -1,0 +1,318 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: rahbar-api
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: rahbar-ui
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: rahbar-chroma
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: rahbar-redis
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: rahbar-indexer
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rahbar-config
+data:
+  RETRIEVER: chroma
+  LLM_PROVIDER: ollama-host
+  EMBED_MODEL: nomic-embed-text
+  CHROMA_HOST: chroma
+  CHROMA_PORT: "8000"
+  CHROMA_COLLECTION: rahbar
+  TOP_K: "5"
+  RELEVANCE_FLOOR: "0.55"
+  CACHE_THRESHOLD: "0.98"
+  REDIS_URL: redis://redis:6379/0
+  TEMPERATURE: "0.2"
+  LLM_MODEL: qwen3:1.7b
+  OLLAMA_URL: http://host.docker.internal:11434
+  CHUNK_SIZE: "400"
+  CHUNK_OVERLAP: "50"
+  ACTIVE_CORPUS_ONLY: "false"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels: {app: api}
+  template:
+    metadata:
+      labels: {app: api}
+    spec:
+      serviceAccountName: rahbar-api
+      automountServiceAccountToken: false
+      terminationGracePeriodSeconds: 30
+      containers:
+        - name: api
+          image: rahbar-api:dev
+          imagePullPolicy: IfNotPresent
+          ports: [{name: http, containerPort: 8000}]
+          envFrom:
+            - configMapRef: {name: rahbar-config}
+          env:
+            - name: LLM_API_KEY
+              valueFrom:
+                secretKeyRef: {name: rahbar-secret, key: LLM_API_KEY, optional: true}
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 768Mi
+          securityContext:
+            runAsNonRoot: true
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+          lifecycle:
+            preStop: {exec: {command: ["/bin/sh", "-c", "sleep 10"]}}
+          startupProbe:
+            httpGet: {path: /healthz, port: http}
+            failureThreshold: 30
+            periodSeconds: 2
+          livenessProbe:
+            httpGet: {path: /healthz, port: http}
+            periodSeconds: 20
+            failureThreshold: 3
+          readinessProbe:
+            httpGet: {path: /readyz, port: http}
+            periodSeconds: 10
+            failureThreshold: 3
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: ui}
+  template:
+    metadata:
+      labels: {app: ui}
+    spec:
+      serviceAccountName: rahbar-ui
+      automountServiceAccountToken: false
+      containers:
+        - name: ui
+          image: rahbar-ui:dev
+          imagePullPolicy: IfNotPresent
+          ports: [{name: http, containerPort: 8080}]
+          resources:
+            requests: {cpu: 25m, memory: 32Mi}
+            limits: {cpu: 100m, memory: 128Mi}
+          securityContext:
+            runAsNonRoot: true
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+          volumeMounts: [{name: tmp, mountPath: /tmp}]
+          livenessProbe: {httpGet: {path: /healthz, port: http}}
+          readinessProbe: {httpGet: {path: /healthz, port: http}}
+      volumes: [{name: tmp, emptyDir: {}}]
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: chroma
+spec:
+  serviceName: chroma
+  replicas: 1
+  selector:
+    matchLabels: {app: chroma}
+  template:
+    metadata:
+      labels: {app: chroma}
+    spec:
+      serviceAccountName: rahbar-chroma
+      automountServiceAccountToken: false
+      enableServiceLinks: false
+      securityContext:
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+      containers:
+        - name: chroma
+          image: chromadb/chroma:1.0.12
+          imagePullPolicy: IfNotPresent
+          ports: [{name: http, containerPort: 8000}]
+          env: [{name: IS_PERSISTENT, value: "TRUE"}, {name: ANONYMIZED_TELEMETRY, value: "FALSE"}]
+          resources:
+            requests: {cpu: 100m, memory: 256Mi}
+            limits: {cpu: 500m, memory: 1Gi}
+          securityContext:
+            runAsNonRoot: true
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+          volumeMounts:
+            - {name: data, mountPath: /data}
+            - {name: tmp, mountPath: /tmp}
+          readinessProbe: {httpGet: {path: /api/v2/heartbeat, port: http}}
+          livenessProbe: {httpGet: {path: /api/v2/heartbeat, port: http}}
+      volumes: [{name: tmp, emptyDir: {}}]
+  volumeClaimTemplates:
+    - metadata: {name: data}
+      spec:
+        accessModes: [ReadWriteOnce]
+        resources: {requests: {storage: 5Gi}}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: redis}
+  template:
+    metadata:
+      labels: {app: redis}
+    spec:
+      serviceAccountName: rahbar-redis
+      automountServiceAccountToken: false
+      securityContext:
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+      containers:
+        - name: redis
+          image: redis:7.4.2-alpine
+          imagePullPolicy: IfNotPresent
+          ports: [{name: redis, containerPort: 6379}]
+          command: ["redis-server"]
+          args: ["--appendonly", "yes"]
+          resources:
+            requests: {cpu: 25m, memory: 64Mi}
+            limits: {cpu: 200m, memory: 256Mi}
+          securityContext:
+            runAsNonRoot: true
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+          volumeMounts: [{name: data, mountPath: /data}]
+      volumes: [{name: data, persistentVolumeClaim: {claimName: redis-data}}]
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: redis-data
+spec:
+  accessModes: [ReadWriteOnce]
+  resources: {requests: {storage: 1Gi}}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: corpus-data
+spec:
+  accessModes: [ReadWriteOnce]
+  resources: {requests: {storage: 5Gi}}
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: indexer
+spec:
+  backoffLimit: 3
+  activeDeadlineSeconds: 7200
+  template:
+    metadata: {labels: {app: indexer}}
+    spec:
+      restartPolicy: OnFailure
+      serviceAccountName: rahbar-indexer
+      automountServiceAccountToken: false
+      containers:
+        - name: indexer
+          image: rahbar-indexer:dev
+          imagePullPolicy: IfNotPresent
+          envFrom: [{configMapRef: {name: rahbar-config}}]
+          resources:
+            requests: {cpu: 250m, memory: 512Mi}
+            limits: {cpu: 4, memory: 2Gi}
+          securityContext:
+            runAsNonRoot: true
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+          volumeMounts:
+            - name: corpus
+              mountPath: /corpus
+              readOnly: true
+      volumes:
+        - name: corpus
+          persistentVolumeClaim: {claimName: corpus-data}
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: reindex
+spec:
+  schedule: "0 2 * * 0"
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      backoffLimit: 3
+      activeDeadlineSeconds: 7200
+      template:
+        metadata: {labels: {app: indexer}}
+        spec:
+          restartPolicy: OnFailure
+          serviceAccountName: rahbar-indexer
+          automountServiceAccountToken: false
+          containers:
+            - name: indexer
+              image: rahbar-indexer:dev
+              imagePullPolicy: IfNotPresent
+              envFrom: [{configMapRef: {name: rahbar-config}}]
+              resources:
+                requests: {cpu: 250m, memory: 512Mi}
+                limits: {cpu: 4, memory: 2Gi}
+              securityContext:
+                runAsNonRoot: true
+                readOnlyRootFilesystem: true
+                allowPrivilegeEscalation: false
+                capabilities:
+                  drop:
+                    - ALL
+              volumeMounts:
+                - name: corpus
+                  mountPath: /corpus
+                  readOnly: true
+          volumes:
+            - name: corpus
+              persistentVolumeClaim: {claimName: corpus-data}
