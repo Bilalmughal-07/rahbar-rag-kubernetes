@@ -1,0 +1,172 @@
+# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 19787.0
+python_gc_objects_collected_total{generation="1"} 2786.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 237.0
+python_gc_collections_total{generation="1"} 21.0
+python_gc_collections_total{generation="2"} 1.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="16",version="3.12.16"} 1.0
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 9.7261568e+08
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 9.9667968e+07
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.79441018511e+09
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 5.609999999999999
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 12.0
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 1.073741816e+09
+# HELP rahbar_requests_total HTTP requests
+# TYPE rahbar_requests_total counter
+rahbar_requests_total{path="/healthz",status="200"} 54.0
+rahbar_requests_total{path="/readyz",status="200"} 107.0
+rahbar_requests_total{path="/api/ask",status="200"} 1.0
+# HELP rahbar_requests_created HTTP requests
+# TYPE rahbar_requests_created gauge
+rahbar_requests_created{path="/healthz",status="200"} 1.7944101934236555e+09
+rahbar_requests_created{path="/readyz",status="200"} 1.7944101934333408e+09
+rahbar_requests_created{path="/api/ask",status="200"} 1.7944110618706613e+09
+# HELP rahbar_request_seconds HTTP request latency
+# TYPE rahbar_request_seconds histogram
+rahbar_request_seconds_bucket{le="0.05",path="/healthz"} 54.0
+rahbar_request_seconds_bucket{le="0.1",path="/healthz"} 54.0
+rahbar_request_seconds_bucket{le="0.25",path="/healthz"} 54.0
+rahbar_request_seconds_bucket{le="0.5",path="/healthz"} 54.0
+rahbar_request_seconds_bucket{le="1.0",path="/healthz"} 54.0
+rahbar_request_seconds_bucket{le="2.0",path="/healthz"} 54.0
+rahbar_request_seconds_bucket{le="5.0",path="/healthz"} 54.0
+rahbar_request_seconds_bucket{le="10.0",path="/healthz"} 54.0
+rahbar_request_seconds_bucket{le="30.0",path="/healthz"} 54.0
+rahbar_request_seconds_bucket{le="60.0",path="/healthz"} 54.0
+rahbar_request_seconds_bucket{le="+Inf",path="/healthz"} 54.0
+rahbar_request_seconds_count{path="/healthz"} 54.0
+rahbar_request_seconds_sum{path="/healthz"} 0.052738126996700885
+rahbar_request_seconds_bucket{le="0.05",path="/readyz"} 107.0
+rahbar_request_seconds_bucket{le="0.1",path="/readyz"} 107.0
+rahbar_request_seconds_bucket{le="0.25",path="/readyz"} 107.0
+rahbar_request_seconds_bucket{le="0.5",path="/readyz"} 107.0
+rahbar_request_seconds_bucket{le="1.0",path="/readyz"} 107.0
+rahbar_request_seconds_bucket{le="2.0",path="/readyz"} 107.0
+rahbar_request_seconds_bucket{le="5.0",path="/readyz"} 107.0
+rahbar_request_seconds_bucket{le="10.0",path="/readyz"} 107.0
+rahbar_request_seconds_bucket{le="30.0",path="/readyz"} 107.0
+rahbar_request_seconds_bucket{le="60.0",path="/readyz"} 107.0
+rahbar_request_seconds_bucket{le="+Inf",path="/readyz"} 107.0
+rahbar_request_seconds_count{path="/readyz"} 107.0
+rahbar_request_seconds_sum{path="/readyz"} 0.9438355040019815
+rahbar_request_seconds_bucket{le="0.05",path="/api/ask"} 0.0
+rahbar_request_seconds_bucket{le="0.1",path="/api/ask"} 0.0
+rahbar_request_seconds_bucket{le="0.25",path="/api/ask"} 0.0
+rahbar_request_seconds_bucket{le="0.5",path="/api/ask"} 0.0
+rahbar_request_seconds_bucket{le="1.0",path="/api/ask"} 0.0
+rahbar_request_seconds_bucket{le="2.0",path="/api/ask"} 0.0
+rahbar_request_seconds_bucket{le="5.0",path="/api/ask"} 1.0
+rahbar_request_seconds_bucket{le="10.0",path="/api/ask"} 1.0
+rahbar_request_seconds_bucket{le="30.0",path="/api/ask"} 1.0
+rahbar_request_seconds_bucket{le="60.0",path="/api/ask"} 1.0
+rahbar_request_seconds_bucket{le="+Inf",path="/api/ask"} 1.0
+rahbar_request_seconds_count{path="/api/ask"} 1.0
+rahbar_request_seconds_sum{path="/api/ask"} 3.5808093979994737
+# HELP rahbar_request_seconds_created HTTP request latency
+# TYPE rahbar_request_seconds_created gauge
+rahbar_request_seconds_created{path="/healthz"} 1.7944101934236796e+09
+rahbar_request_seconds_created{path="/readyz"} 1.7944101934333565e+09
+rahbar_request_seconds_created{path="/api/ask"} 1.7944110618706994e+09
+# HELP rahbar_retrieval_seconds Chroma/stub retrieval latency
+# TYPE rahbar_retrieval_seconds histogram
+rahbar_retrieval_seconds_bucket{le="0.005"} 0.0
+rahbar_retrieval_seconds_bucket{le="0.01"} 0.0
+rahbar_retrieval_seconds_bucket{le="0.025"} 0.0
+rahbar_retrieval_seconds_bucket{le="0.05"} 0.0
+rahbar_retrieval_seconds_bucket{le="0.075"} 0.0
+rahbar_retrieval_seconds_bucket{le="0.1"} 0.0
+rahbar_retrieval_seconds_bucket{le="0.25"} 0.0
+rahbar_retrieval_seconds_bucket{le="0.5"} 0.0
+rahbar_retrieval_seconds_bucket{le="0.75"} 0.0
+rahbar_retrieval_seconds_bucket{le="1.0"} 0.0
+rahbar_retrieval_seconds_bucket{le="2.5"} 0.0
+rahbar_retrieval_seconds_bucket{le="5.0"} 0.0
+rahbar_retrieval_seconds_bucket{le="7.5"} 0.0
+rahbar_retrieval_seconds_bucket{le="10.0"} 0.0
+rahbar_retrieval_seconds_bucket{le="+Inf"} 0.0
+rahbar_retrieval_seconds_count 0.0
+rahbar_retrieval_seconds_sum 0.0
+# HELP rahbar_retrieval_seconds_created Chroma/stub retrieval latency
+# TYPE rahbar_retrieval_seconds_created gauge
+rahbar_retrieval_seconds_created 1.794410189599927e+09
+# HELP rahbar_generation_seconds LLM generation latency
+# TYPE rahbar_generation_seconds histogram
+rahbar_generation_seconds_bucket{le="0.005"} 0.0
+rahbar_generation_seconds_bucket{le="0.01"} 0.0
+rahbar_generation_seconds_bucket{le="0.025"} 0.0
+rahbar_generation_seconds_bucket{le="0.05"} 0.0
+rahbar_generation_seconds_bucket{le="0.075"} 0.0
+rahbar_generation_seconds_bucket{le="0.1"} 0.0
+rahbar_generation_seconds_bucket{le="0.25"} 0.0
+rahbar_generation_seconds_bucket{le="0.5"} 0.0
+rahbar_generation_seconds_bucket{le="0.75"} 0.0
+rahbar_generation_seconds_bucket{le="1.0"} 0.0
+rahbar_generation_seconds_bucket{le="2.5"} 0.0
+rahbar_generation_seconds_bucket{le="5.0"} 0.0
+rahbar_generation_seconds_bucket{le="7.5"} 0.0
+rahbar_generation_seconds_bucket{le="10.0"} 0.0
+rahbar_generation_seconds_bucket{le="+Inf"} 0.0
+rahbar_generation_seconds_count 0.0
+rahbar_generation_seconds_sum 0.0
+# HELP rahbar_generation_seconds_created LLM generation latency
+# TYPE rahbar_generation_seconds_created gauge
+rahbar_generation_seconds_created 1.7944101895999606e+09
+# HELP rahbar_cache_hits_total Semantic cache hits
+# TYPE rahbar_cache_hits_total counter
+rahbar_cache_hits_total 1.0
+# HELP rahbar_cache_hits_created Semantic cache hits
+# TYPE rahbar_cache_hits_created gauge
+rahbar_cache_hits_created 1.7944101895999868e+09
+# HELP rahbar_cache_misses_total Semantic cache misses
+# TYPE rahbar_cache_misses_total counter
+rahbar_cache_misses_total 0.0
+# HELP rahbar_cache_misses_created Semantic cache misses
+# TYPE rahbar_cache_misses_created gauge
+rahbar_cache_misses_created 1.7944101896e+09
+# HELP rahbar_abstentions_total Answers that declined due to missing evidence
+# TYPE rahbar_abstentions_total counter
+rahbar_abstentions_total 0.0
+# HELP rahbar_abstentions_created Answers that declined due to missing evidence
+# TYPE rahbar_abstentions_created gauge
+rahbar_abstentions_created 1.7944101896000051e+09
+# HELP rahbar_fallbacks_total Safe answer fallbacks
+# TYPE rahbar_fallbacks_total counter
+rahbar_fallbacks_total 0.0
+# HELP rahbar_fallbacks_created Safe answer fallbacks
+# TYPE rahbar_fallbacks_created gauge
+rahbar_fallbacks_created 1.7944101896000097e+09
+# HELP rahbar_tokens_in_total Estimated prompt tokens
+# TYPE rahbar_tokens_in_total counter
+rahbar_tokens_in_total 0.0
+# HELP rahbar_tokens_in_created Estimated prompt tokens
+# TYPE rahbar_tokens_in_created gauge
+rahbar_tokens_in_created 1.7944101896000137e+09
+# HELP rahbar_tokens_out_total Estimated answer tokens
+# TYPE rahbar_tokens_out_total counter
+rahbar_tokens_out_total 0.0
+# HELP rahbar_tokens_out_created Estimated answer tokens
+# TYPE rahbar_tokens_out_created gauge
+rahbar_tokens_out_created 1.7944101896000175e+09

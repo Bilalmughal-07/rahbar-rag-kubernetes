@@ -1,0 +1,68 @@
+# Official FAST-NUCES public documents. The fetcher records the exact bytes and
+# SHA-256 values in MANIFEST.md; failed or stale URLs are reported rather than hidden.
+documents:
+  - name: Student Handbook (Jun 2026)
+    url: https://nu.edu.pk/public/downloads/Student_Handbook_2026.pdf
+    doc_version: "2026-06"
+    superseded: false
+    active: true
+
+  - name: Faculty Handbook (Jun 2026)
+    url: https://nu.edu.pk/public/downloads/Faculty_Handbook_2026.pdf
+    doc_version: "2026-06"
+    superseded: false
+    active: true
+
+  - name: Undergraduate Academic Rules Handbook (Jun 2026)
+    url: https://nu.edu.pk/public/downloads/Academic_Rules_Handbook_2026.pdf
+    doc_version: "2026-06"
+    superseded: false
+    active: true
+
+  - name: Undergraduate Academic Rules and Regulations (earlier official edition)
+    url: https://nu.edu.pk/public/downloads/Academic-Rules-%20Undergrad-Programs.pdf
+    doc_version: "2023-08"
+    superseded: true
+    active: true
+
+  - name: Prospectus 2026 - Academic Rules and Regulations
+    url: https://nu.edu.pk/Admissions/ProspectusUpload/Academic%20Rules%20and%20Regulations.pdf
+    doc_version: "2026"
+    superseded: false
+    active: true
+
+  - name: Annual Report 2023-24
+    url: https://nu.edu.pk/public/downloads/AnnualReportForm/Annual%20Report%202023-24.pdf?251014=
+    doc_version: "2023-24"
+    superseded: false
+    active: true
+
+  - name: Annual Report 2022-23
+    url: https://nu.edu.pk/public/downloads/AnnualReportForm/Annual%20Report%202022-23.pdf?261108=
+    doc_version: "2022-23"
+    superseded: true
+    active: true
+
+  - name: PhD Handbook (Aug 2026)
+    url: https://nu.edu.pk/public/downloads/PhD_Handbook_2026_20261022.pdf
+    doc_version: "2026-08"
+    superseded: false
+    active: true
+
+  - name: Fee Structure page
+    url: https://www.nu.edu.pk/Admissions/FeeStructure
+    doc_version: "2026-27"
+    superseded: false
+    active: true
+
+  - name: Grading page
+    url: https://www.nu.edu.pk/Student/Grading
+    doc_version: "2026"
+    superseded: false
+    active: true
+
+  - name: Faculty Entrepreneurship and Technical Start-ups Policy
+    url: https://www.nu.edu.pk/OricResources/ResearchPolicies/27.pdf?20220530=
+    doc_version: "2022-05"
+    superseded: false
+    active: true

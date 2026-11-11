@@ -1,0 +1,43 @@
+﻿NAME                                        READY   STATUS      RESTARTS      AGE
+pod/api-9bd78b78b-sgc7j                     1/1     Running     0             31m
+pod/api-9bd78b78b-t89s8                     1/1     Running     0             31m
+pod/api-9bd78b78b-w7md7                     1/1     Running     0             24m
+pod/cache-invalidation-verification-nxkm5   0/1     Completed   0             30m
+pod/chroma-0                                1/1     Running     4 (53m ago)   53m
+pod/indexer-security-verified-qx4j4         0/1     Completed   0             51m
+pod/indexer-v8xml                           0/1     Completed   0             79m
+pod/redis-f66cc4647-jkq6h                   1/1     Running     4 (53m ago)   53m
+pod/ui-6c768cb45b-vzcxd                     1/1     Running     0             42m
+
+NAME                    READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/api     3/3     3            3           88m
+deployment.apps/redis   1/1     1            1           88m
+deployment.apps/ui      1/1     1            1           88m
+
+NAME                      READY   AGE
+statefulset.apps/chroma   1/1     88m
+
+NAME             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+service/api      ClusterIP   10.96.101.110   <none>        8000/TCP   88m
+service/chroma   ClusterIP   10.96.163.234   <none>        8000/TCP   88m
+service/redis    ClusterIP   10.96.43.37     <none>        6379/TCP   88m
+service/ui       ClusterIP   10.96.82.126    <none>        8080/TCP   88m
+
+NAME                                  STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+persistentvolumeclaim/corpus-data     Bound    pvc-70988e22-3fb4-4c06-b2eb-98c4f535b9c7   5Gi        RWO            standard       <unset>                 88m
+persistentvolumeclaim/data-chroma-0   Bound    pvc-8d96c86e-ee2e-42a0-b167-7f669b9c19e5   5Gi        RWO            standard       <unset>                 88m
+persistentvolumeclaim/redis-data      Bound    pvc-1ce1a5a7-339f-41fe-835f-c62289415119   1Gi        RWO            standard       <unset>                 88m
+
+NAME                                        STATUS     COMPLETIONS   DURATION   AGE
+job.batch/cache-invalidation-verification   Complete   1/1           3s         30m
+job.batch/indexer                           Complete   1/1           19m        88m
+job.batch/indexer-security-verified         Complete   1/1           6m26s      51m
+
+NAME                    SCHEDULE    TIMEZONE   SUSPEND   ACTIVE   LAST SCHEDULE   AGE
+cronjob.batch/reindex   0 2 * * 0   <none>     False     0        <none>          88m
+
+NAME                               CLASS   HOSTS          ADDRESS      PORTS   AGE
+ingress.networking.k8s.io/rahbar   nginx   rahbar.local   172.24.0.5   80      88m
+
+NAME                                      REFERENCE        TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/api   Deployment/api   cpu: 3%/70%   3         8         3          88m

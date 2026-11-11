@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rahbar
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "120"
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: rahbar.local
+      http:
+        paths:
+          - path: /healthz
+            pathType: Exact
+            backend: {service: {name: api, port: {name: http}}}
+          - path: /readyz
+            pathType: Exact
+            backend: {service: {name: api, port: {name: http}}}
+          - path: /metrics
+            pathType: Exact
+            backend: {service: {name: api, port: {name: http}}}
+          - path: /api
+            pathType: Prefix
+            backend: {service: {name: api, port: {name: http}}}
+          - path: /
+            pathType: Prefix
+            backend: {service: {name: ui, port: {name: http}}}

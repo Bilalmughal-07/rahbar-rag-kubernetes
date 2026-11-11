@@ -1,0 +1,32 @@
+# One-time migration for RAHBAR PVCs previously written by root containers.
+# Does not delete or rewrite file contents. Not part of the normal overlay.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: volume-permissions
+  namespace: rahbar
+spec:
+  restartPolicy: Never
+  automountServiceAccountToken: false
+  containers:
+    - name: permissions
+      image: busybox:1.36
+      command: ["sh", "-c", "chown -R 10001:10001 /chroma /redis"]
+      securityContext:
+        runAsUser: 0
+        readOnlyRootFilesystem: true
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop: [ALL]
+          add: [CHOWN, DAC_OVERRIDE, FOWNER]
+      resources:
+        requests: {cpu: 10m, memory: 16Mi}
+        limits: {cpu: 100m, memory: 64Mi}
+      volumeMounts:
+        - {name: chroma, mountPath: /chroma}
+        - {name: redis, mountPath: /redis}
+  volumes:
+    - name: chroma
+      persistentVolumeClaim: {claimName: data-chroma-0}
+    - name: redis
+      persistentVolumeClaim: {claimName: redis-data}

@@ -1,0 +1,21 @@
+{
+  "count": 1454,
+  "metadata": {
+    "hnsw:space": "cosine",
+    "dimension": 768,
+    "index_version": "6c5a18b1c31b580b",
+    "embed_model": "nomic-embed-text"
+  },
+  "versions": {
+    "2026-06": 758,
+    "2023-08": 76,
+    "2026": 30,
+    "2023-24": 217,
+    "2022-23": 73,
+    "2026-08": 265,
+    "2026-27": 6,
+    "2022-05": 29
+  },
+  "missing_required_metadata": 0,
+  "superseded_chunks": 149
+}

@@ -1,0 +1,11 @@
+{
+  "original_count": 1454,
+  "backup_count": 1454,
+  "backup_collection": "rahbar-before-pdf-update-20261111",
+  "metadata": {
+    "index_version": "6c5a18b1c31b580b",
+    "dimension": 768,
+    "embed_model": "nomic-embed-text",
+    "hnsw:space": "cosine"
+  }
+}

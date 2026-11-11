@@ -1,0 +1,87 @@
+{
+  "model": "nomic-embed-text",
+  "pairs": [
+    {
+      "left": "What attendance is required to sit the final exam?",
+      "right": "What minimum class attendance is needed for the final examination?",
+      "equivalent": true,
+      "similarity": 0.8947159906213583
+    },
+    {
+      "left": "What does grade A mean?",
+      "right": "What is the meaning of an A grade?",
+      "equivalent": true,
+      "similarity": 0.9264844287656011
+    },
+    {
+      "left": "How many credit hours are required in the PhD roadmap?",
+      "right": "What is the total credit requirement for the PhD roadmap?",
+      "equivalent": true,
+      "similarity": 0.8741529016469429
+    },
+    {
+      "left": "What does grade A mean?",
+      "right": "What does grade B mean?",
+      "equivalent": false,
+      "similarity": 0.8308027786999312
+    },
+    {
+      "left": "What does grade A mean?",
+      "right": "What does grade F mean?",
+      "equivalent": false,
+      "similarity": 0.8034155323109348
+    },
+    {
+      "left": "What is the fee refund rule after one week?",
+      "right": "What is the fee refund rule after four weeks?",
+      "equivalent": false,
+      "similarity": 0.8675357015715783
+    },
+    {
+      "left": "What is the summer attendance rule in the 2023 policy?",
+      "right": "What is the summer attendance rule in the 2026 policy?",
+      "equivalent": false,
+      "similarity": 0.9510536630844924
+    },
+    {
+      "left": "What is the CGPA for readmission?",
+      "right": "What is the CGPA for graduation?",
+      "equivalent": false,
+      "similarity": 0.7330546646043683
+    }
+  ],
+  "thresholds": [
+    {
+      "threshold": 0.85,
+      "false_hits": 2,
+      "true_hits": 3
+    },
+    {
+      "threshold": 0.9,
+      "false_hits": 1,
+      "true_hits": 1
+    },
+    {
+      "threshold": 0.92,
+      "false_hits": 1,
+      "true_hits": 1
+    },
+    {
+      "threshold": 0.95,
+      "false_hits": 1,
+      "true_hits": 0
+    },
+    {
+      "threshold": 0.98,
+      "false_hits": 0,
+      "true_hits": 0
+    },
+    {
+      "threshold": 1.0,
+      "false_hits": 0,
+      "true_hits": 0
+    }
+  ],
+  "lowest_tested_zero_false_hit_threshold": 0.98,
+  "limitation": "Eight labeled pairs; no claim of zero false hits on unseen questions."
+}
