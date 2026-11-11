@@ -112,21 +112,21 @@ jobs:
           docker build -t rahbar-indexer:${{ env.IMAGE_TAG }} indexer
           docker build -t rahbar-ui:${{ env.IMAGE_TAG }} ui
       - name: Scan API image for fixable high or critical vulnerabilities
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@915b19bbe73b92a6cf82a1bc12b087c9a19a5fe2 # v0.28.0
         with:
           image-ref: rahbar-api:${{ env.IMAGE_TAG }}
           severity: HIGH,CRITICAL
           ignore-unfixed: true
           exit-code: '1'
       - name: Scan indexer image for fixable high or critical vulnerabilities
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@915b19bbe73b92a6cf82a1bc12b087c9a19a5fe2 # v0.28.0
         with:
           image-ref: rahbar-indexer:${{ env.IMAGE_TAG }}
           severity: HIGH,CRITICAL
           ignore-unfixed: true
           exit-code: '1'
       - name: Scan UI image for fixable high or critical vulnerabilities
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@915b19bbe73b92a6cf82a1bc12b087c9a19a5fe2 # v0.28.0
         with:
           image-ref: rahbar-ui:${{ env.IMAGE_TAG }}
           severity: HIGH,CRITICAL
