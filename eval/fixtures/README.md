@@ -15,3 +15,7 @@ expects the service to decline.
 Each file starts with front matter (`doc_version`, `superseded`). The indexer's
 `discover()` reads it when there is no `_index.json`, so your extract stage
 needs to handle `.md` files as well as PDFs.
+
+CI uses the test-only deterministic `EMBED_PROVIDER=hash` backend and the stub LLM so
+the fixture evaluation does not require Ollama or a hosted API. The measured fixture
+baseline is recorded in `baseline.fixture.json`; production uses Ollama by default.

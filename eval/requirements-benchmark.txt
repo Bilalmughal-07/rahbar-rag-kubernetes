@@ -1,0 +1,2 @@
+# Optional measurement tokenizer; separate from the embedding model's tokenizer.
+tiktoken==0.12.0
