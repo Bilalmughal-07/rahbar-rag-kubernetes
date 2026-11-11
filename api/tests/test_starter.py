@@ -26,6 +26,12 @@ def test_liveness_answers_without_dependencies(client: TestClient) -> None:
     assert r.json() == {"status": "alive"}
 
 
+def test_stub_readiness_does_not_require_external_services(client: TestClient) -> None:
+    r = client.get("/readyz")
+    assert r.status_code == 200
+    assert r.json()["status"] == "ready"
+
+
 def test_ask_returns_the_response_contract(client: TestClient) -> None:
     from app.schemas import AskResponse
 

@@ -2,8 +2,11 @@
 
 from __future__ import annotations
 
+import httpx
+
 from ...config import Settings
 from ...schemas import Answer, Passage
+from .common import answer_schema, build_messages, parse_answer
 
 
 class OllamaProvider:
@@ -13,8 +16,22 @@ class OllamaProvider:
         self.settings = settings   # ollama_url, llm_model, temperature
 
     def generate(self, question: str, passages: list[Passage]) -> Answer:
-        # STARTER-TODO(3.4): build the augmented prompt (instructions, numbered evidence,
-        # then the question), call POST {ollama_url}/api/chat with the Answer schema as
-        # the output format, and turn the reply into an Answer. Section 3.4 lists what
-        # a production call needs around it; read it before you write this.
-        raise NotImplementedError("OllamaProvider.generate: see STARTER-TODO(3.4)")
+        payload = {
+            "model": self.settings.llm_model,
+            "messages": build_messages(question, passages),
+            "stream": False,
+            # Qwen3 otherwise places its answer in the hidden thinking field;
+            # grounded JSON must be returned in message.content for validation.
+            "think": False,
+            "format": answer_schema(passages),
+            "options": {"temperature": self.settings.temperature},
+        }
+        try:
+            response = httpx.post(
+                f"{self.settings.ollama_url.rstrip('/')}/api/chat", json=payload, timeout=120.0
+            )
+            response.raise_for_status()
+            message = response.json().get("message", {})
+            return parse_answer(message.get("content", ""))
+        except httpx.HTTPError as exc:
+            raise RuntimeError(f"Ollama generation failed: {exc}") from exc

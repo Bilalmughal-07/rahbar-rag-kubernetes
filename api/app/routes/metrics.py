@@ -18,6 +18,14 @@ LATENCY = Histogram(
     ["path"],
     buckets=(0.05, 0.1, 0.25, 0.5, 1, 2, 5, 10, 30, 60),
 )
+RETRIEVAL_LATENCY = Histogram("rahbar_retrieval_seconds", "Chroma/stub retrieval latency")
+GENERATION_LATENCY = Histogram("rahbar_generation_seconds", "LLM generation latency")
+CACHE_HITS = Counter("rahbar_cache_hits_total", "Semantic cache hits")
+CACHE_MISSES = Counter("rahbar_cache_misses_total", "Semantic cache misses")
+ABSTENTIONS = Counter("rahbar_abstentions_total", "Answers that declined due to missing evidence")
+FALLBACKS = Counter("rahbar_fallbacks_total", "Safe answer fallbacks")
+TOKENS_IN = Counter("rahbar_tokens_in_total", "Estimated prompt tokens")
+TOKENS_OUT = Counter("rahbar_tokens_out_total", "Estimated answer tokens")
 
 
 @router.get("/metrics")

@@ -42,5 +42,8 @@ _PASSAGES = [
 class StubRetriever:
     name = "stub"
 
+    def metadata(self) -> dict[str, object]:
+        return {}
+
     def retrieve(self, question: str, k: int) -> list[Passage]:
         return [p.model_copy() for p in _PASSAGES[:k]]

@@ -21,6 +21,7 @@ from .logjson import configure_logging, request_id_var
 from .providers.llm import get_provider
 from .retrieval import get_retriever
 from .routes import ask, health, metrics
+from .services.cache import SemanticCache
 
 log = logging.getLogger("rahbar.api")
 
@@ -32,13 +33,27 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     app.state.settings = settings
     app.state.retriever = get_retriever(settings)
     app.state.provider = get_provider(settings)
-    # STARTER-TODO(4.4): compare the collection's embedding-model metadata with
-    # settings.embed_model here, and make /readyz fail on a mismatch.
+    app.state.cache = SemanticCache(settings, getattr(app.state.retriever, "embed", None))
+    app.state.embedding_error = None
+    if settings.retriever == "chroma":
+        try:
+            metadata = app.state.retriever.metadata()
+            indexed_model = str(metadata.get("embed_model", ""))
+            if indexed_model != settings.embed_model:
+                app.state.embedding_error = (
+                    f"embedding model conflict: index={indexed_model!r}, "
+                    f"api={settings.embed_model!r}"
+                )
+                log.error("embedding model conflict", extra={"indexed_model": indexed_model,
+                                                              "api_model": settings.embed_model})
+        except Exception as exc:
+            app.state.embedding_error = f"chroma unavailable: {exc}"
     # This process only reads the index. The indexer Job writes it.
     log.info(
         "api started",
         extra={"retriever": settings.retriever, "llm_provider": settings.llm_provider,
-               "embed_model": settings.embed_model, "top_k": settings.top_k},
+               "embed_model": settings.embed_model, "top_k": settings.top_k,
+               "cache_enabled": app.state.cache.enabled},
     )
     yield
 

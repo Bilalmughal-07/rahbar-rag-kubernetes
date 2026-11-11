@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from fastapi import APIRouter, Request, Response
+from fastapi.responses import JSONResponse
 
 router = APIRouter()
 
@@ -15,8 +16,40 @@ def healthz() -> dict[str, str]:
 
 @router.get("/readyz")
 def readyz(request: Request, response: Response) -> dict[str, object]:
-    # STARTER-TODO(4.3, 4.4): return 503, naming the failed dependency, unless Chroma is
-    # reachable, the collection exists and is non-empty, Redis is reachable, and the
-    # collection's embedding model matches EMBED_MODEL. Until then this always says yes,
-    # which is exactly the lie section 4.2 warns about.
-    return {"status": "ready", "checks": {}}
+    settings = request.app.state.settings
+    checks: dict[str, object] = {}
+    failures: list[str] = []
+    retriever = request.app.state.retriever
+
+    if settings.retriever == "stub":
+        checks["retriever"] = "stub"
+    else:
+        try:
+            metadata = retriever.metadata()
+            count = int(retriever.collection().count())
+            checks["chroma"] = {"reachable": True, "count": count}
+            if count == 0:
+                failures.append("chroma collection is empty")
+            indexed_model = str(metadata.get("embed_model", ""))
+            checks["embedding_model"] = {"indexed": indexed_model, "configured": settings.embed_model}
+            if indexed_model != settings.embed_model:
+                failures.append(
+                    f"embedding model conflict: index={indexed_model!r}, api={settings.embed_model!r}"
+                )
+        except Exception as exc:
+            failures.append(f"chroma unavailable: {exc}")
+            checks["chroma"] = {"reachable": False, "error": str(exc)}
+
+    cache = getattr(request.app.state, "cache", None)
+    if settings.retriever == "stub" or cache is None or not settings.cache_enabled:
+        checks["redis"] = "stub" if settings.retriever == "stub" else "disabled"
+    elif cache.ping():
+        checks["redis"] = "reachable"
+    else:
+        failures.append("redis unavailable")
+        checks["redis"] = "unreachable"
+
+    if failures:
+        return JSONResponse(status_code=503, content={"status": "not_ready", "checks": checks,
+                                                       "failures": failures})
+    return {"status": "ready", "checks": checks}
