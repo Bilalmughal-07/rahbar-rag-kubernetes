@@ -20,7 +20,11 @@ class Document:
     source: str
     doc_version: str         # e.g. "2026-06"; from corpus/sources.yaml
     superseded: bool         # True for an older version of a policy
+    title: str = ""
     pages: list[Page] = field(default_factory=list)
+    source_url: str = ""
+    document_id: str = ""
+    content_hash: str = ""
 
 
 @dataclass
@@ -32,13 +36,26 @@ class Chunk:
     page: int
     doc_version: str
     superseded: bool
+    title: str = ""
+    source_url: str = ""
+    document_id: str = ""
+    content_hash: str = ""
 
     def metadata(self) -> dict[str, str | int | bool]:
         """Chroma metadata values must be str, int, float or bool."""
-        return {
+        metadata: dict[str, str | int | bool] = {
             "source": self.source,
             "section": self.section,
             "page": self.page,
             "doc_version": self.doc_version,
             "superseded": self.superseded,
         }
+        if self.title:
+            metadata["title"] = self.title
+        if self.source_url:
+            metadata["source_url"] = self.source_url
+        if self.document_id:
+            metadata["document_id"] = self.document_id
+        if self.content_hash:
+            metadata["content_hash"] = self.content_hash
+        return metadata
