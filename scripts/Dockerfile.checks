@@ -1,0 +1,8 @@
+# Optional local reproduction of CI's Python 3.12 checks; not an application image.
+# Build after rahbar-indexer:dev: docker build -f scripts/Dockerfile.checks -t rahbar-checks:local .
+FROM rahbar-indexer:dev
+USER root
+COPY api/requirements.txt /checks/api/requirements.txt
+COPY api/requirements-dev.txt /checks/api/requirements-dev.txt
+RUN pip install --no-cache-dir -r /checks/api/requirements-dev.txt
+WORKDIR /work
