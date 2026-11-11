@@ -1,0 +1,2 @@
+﻿NAME                      STATUS   ROLES           AGE   VERSION
+rahbar-ci-control-plane   Ready    control-plane   60m   v1.31.4

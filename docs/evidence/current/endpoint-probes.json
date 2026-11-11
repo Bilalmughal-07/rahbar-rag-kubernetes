@@ -1,0 +1,37 @@
+[
+  {
+    "path": "/healthz",
+    "status": 200,
+    "body": {
+      "status": "alive"
+    }
+  },
+  {
+    "path": "/readyz",
+    "status": 200,
+    "body": {
+      "status": "ready",
+      "checks": {
+        "chroma": {
+          "reachable": true,
+          "count": 1454
+        },
+        "embedding_model": {
+          "indexed": "nomic-embed-text",
+          "configured": "nomic-embed-text"
+        },
+        "redis": "reachable"
+      }
+    }
+  },
+  {
+    "path": "/metrics",
+    "status": 200,
+    "content_type": "text/plain; version=0.0.4; charset=utf-8"
+  },
+  {
+    "path": "/api/ask",
+    "case": "short question",
+    "status": 422
+  }
+]

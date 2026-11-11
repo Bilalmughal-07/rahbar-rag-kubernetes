@@ -1,0 +1,24 @@
+{
+  "tokenizer": "cl100k_base (measurement tokenizer; not the nomic embedding tokenizer)",
+  "original_tokens": 180067,
+  "configurations": [
+    {
+      "size_words": 200,
+      "overlap_words": 25,
+      "stored_tokens": 163590,
+      "token_amplification": 0.9084951712418156
+    },
+    {
+      "size_words": 400,
+      "overlap_words": 50,
+      "stored_tokens": 163645,
+      "token_amplification": 0.908800613105122
+    },
+    {
+      "size_words": 600,
+      "overlap_words": 75,
+      "stored_tokens": 163889,
+      "token_amplification": 0.9101556642805179
+    }
+  ]
+}

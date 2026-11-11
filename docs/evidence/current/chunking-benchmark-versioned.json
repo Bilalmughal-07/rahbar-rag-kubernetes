@@ -1,0 +1,440 @@
+{
+  "method": "Chroma cosine retrieval, same API version filter and relevance floor",
+  "units": "whitespace-separated words (not tokenizer tokens)",
+  "golden_sha256": "5b74bfdc97ea5177c8364d2f048bbb4f6844b5aa77d2d840e05cf220b84f96c7",
+  "original_words": 126701,
+  "configurations": [
+    {
+      "size": 200,
+      "overlap": 25,
+      "chunks": 1636,
+      "stored_words": 124287,
+      "word_amplification": 0.9809472695558835,
+      "collection": "rahbar-benchmark-1794409601-200",
+      "per_question": [
+        {
+          "id": "phd-roadmap",
+          "type": "phd",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "phd-methodology",
+          "type": "phd",
+          "recall_at_3": 0.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "faculty-grading",
+          "type": "faculty",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "faculty-lecture-hours",
+          "type": "faculty",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "undergrad-readmission",
+          "type": "exact-term",
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0
+        },
+        {
+          "id": "undergrad-cgpa",
+          "type": "exact-term",
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0
+        },
+        {
+          "id": "version-sensitive-annual-report",
+          "type": "version-sensitive",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "rules-2023-repeat-failed-course",
+          "type": "version-sensitive",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "rules-2023-summer-duration",
+          "type": "version-sensitive",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "rules-2026-summer-attendance",
+          "type": "version-sensitive",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "prospectus-attendance",
+          "type": "prospectus",
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0
+        },
+        {
+          "id": "prospectus-repeat-course",
+          "type": "prospectus",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "annual-2024-startups",
+          "type": "annual-report",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "annual-2024-publications",
+          "type": "annual-report",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "annual-2023-graduation",
+          "type": "annual-report",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "annual-2023-publications",
+          "type": "annual-report",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "fee-html",
+          "type": "html-table",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "grading-html",
+          "type": "html-table",
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0
+        },
+        {
+          "id": "scanned-policy-ocr-gap",
+          "type": "scanned-policy",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "prompt-injection-probe",
+          "type": "exact-safety",
+          "recall_at_3": null,
+          "recall_at_5": null
+        },
+        {
+          "id": "absent-hostel-curfew",
+          "type": "must-abstain",
+          "recall_at_3": null,
+          "recall_at_5": null
+        },
+        {
+          "id": "absent-hostel-room-allocation",
+          "type": "must-abstain",
+          "recall_at_3": null,
+          "recall_at_5": null
+        }
+      ],
+      "recall_at_3": 0.7368421052631579,
+      "recall_at_5": 0.7894736842105263
+    },
+    {
+      "size": 400,
+      "overlap": 50,
+      "chunks": 1454,
+      "stored_words": 124200,
+      "word_amplification": 0.9802606135705322,
+      "collection": "rahbar-benchmark-1794409601-400",
+      "per_question": [
+        {
+          "id": "phd-roadmap",
+          "type": "phd",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "phd-methodology",
+          "type": "phd",
+          "recall_at_3": 0.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "faculty-grading",
+          "type": "faculty",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "faculty-lecture-hours",
+          "type": "faculty",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "undergrad-readmission",
+          "type": "exact-term",
+          "recall_at_3": 0.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "undergrad-cgpa",
+          "type": "exact-term",
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0
+        },
+        {
+          "id": "version-sensitive-annual-report",
+          "type": "version-sensitive",
+          "recall_at_3": 0.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "rules-2023-repeat-failed-course",
+          "type": "version-sensitive",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "rules-2023-summer-duration",
+          "type": "version-sensitive",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "rules-2026-summer-attendance",
+          "type": "version-sensitive",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "prospectus-attendance",
+          "type": "prospectus",
+          "recall_at_3": 0.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "prospectus-repeat-course",
+          "type": "prospectus",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "annual-2024-startups",
+          "type": "annual-report",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "annual-2024-publications",
+          "type": "annual-report",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "annual-2023-graduation",
+          "type": "annual-report",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "annual-2023-publications",
+          "type": "annual-report",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "fee-html",
+          "type": "html-table",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "grading-html",
+          "type": "html-table",
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0
+        },
+        {
+          "id": "scanned-policy-ocr-gap",
+          "type": "scanned-policy",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "prompt-injection-probe",
+          "type": "exact-safety",
+          "recall_at_3": null,
+          "recall_at_5": null
+        },
+        {
+          "id": "absent-hostel-curfew",
+          "type": "must-abstain",
+          "recall_at_3": null,
+          "recall_at_5": null
+        },
+        {
+          "id": "absent-hostel-room-allocation",
+          "type": "must-abstain",
+          "recall_at_3": null,
+          "recall_at_5": null
+        }
+      ],
+      "recall_at_3": 0.6842105263157895,
+      "recall_at_5": 0.8947368421052632
+    },
+    {
+      "size": 600,
+      "overlap": 75,
+      "chunks": 1397,
+      "stored_words": 124300,
+      "word_amplification": 0.9810498733238096,
+      "collection": "rahbar-benchmark-1794409601-600",
+      "per_question": [
+        {
+          "id": "phd-roadmap",
+          "type": "phd",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "phd-methodology",
+          "type": "phd",
+          "recall_at_3": 0.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "faculty-grading",
+          "type": "faculty",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "faculty-lecture-hours",
+          "type": "faculty",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "undergrad-readmission",
+          "type": "exact-term",
+          "recall_at_3": 0.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "undergrad-cgpa",
+          "type": "exact-term",
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0
+        },
+        {
+          "id": "version-sensitive-annual-report",
+          "type": "version-sensitive",
+          "recall_at_3": 0.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "rules-2023-repeat-failed-course",
+          "type": "version-sensitive",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "rules-2023-summer-duration",
+          "type": "version-sensitive",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "rules-2026-summer-attendance",
+          "type": "version-sensitive",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "prospectus-attendance",
+          "type": "prospectus",
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0
+        },
+        {
+          "id": "prospectus-repeat-course",
+          "type": "prospectus",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "annual-2024-startups",
+          "type": "annual-report",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "annual-2024-publications",
+          "type": "annual-report",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "annual-2023-graduation",
+          "type": "annual-report",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "annual-2023-publications",
+          "type": "annual-report",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "fee-html",
+          "type": "html-table",
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0
+        },
+        {
+          "id": "grading-html",
+          "type": "html-table",
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0
+        },
+        {
+          "id": "scanned-policy-ocr-gap",
+          "type": "scanned-policy",
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        },
+        {
+          "id": "prompt-injection-probe",
+          "type": "exact-safety",
+          "recall_at_3": null,
+          "recall_at_5": null
+        },
+        {
+          "id": "absent-hostel-curfew",
+          "type": "must-abstain",
+          "recall_at_3": null,
+          "recall_at_5": null
+        },
+        {
+          "id": "absent-hostel-room-allocation",
+          "type": "must-abstain",
+          "recall_at_3": null,
+          "recall_at_5": null
+        }
+      ],
+      "recall_at_3": 0.631578947368421,
+      "recall_at_5": 0.7894736842105263
+    }
+  ]
+}

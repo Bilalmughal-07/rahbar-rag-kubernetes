@@ -1,0 +1,1423 @@
+[
+  {
+    "id": "phd-roadmap",
+    "type": "phd",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "phd-handbook-aug-2026.pdf",
+        "section": "3 Roadmap for PhD Program",
+        "page": 8
+      }
+    ],
+    "expect": "42",
+    "response": {
+      "request_id": "a7ab25ee258474773c07a47eed3509b6",
+      "answer": "42",
+      "citations": [
+        {
+          "source": "phd-handbook-aug-2026.pdf",
+          "section": "3 Roadmap for PhD Program",
+          "page": 8
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "f2b6759a8d000796",
+          "source": "phd-handbook-aug-2026.pdf",
+          "section": "3 Roadmap for PhD Program",
+          "page": 8,
+          "score": 0.81122267
+        },
+        {
+          "chunk_id": "5e10e9a4164e96c6",
+          "source": "phd-handbook-aug-2026.pdf",
+          "section": "6.1.10 A 3 credit-hour course of Research Methodology is mandatory for",
+          "page": 14,
+          "score": 0.7555567
+        },
+        {
+          "chunk_id": "f4c77d7598569839",
+          "source": "phd-handbook-aug-2026.pdf",
+          "section": "19.5 Progress milestones",
+          "page": 32,
+          "score": 0.7020058
+        },
+        {
+          "chunk_id": "59053bce3feec05e",
+          "source": "phd-handbook-aug-2026.pdf",
+          "section": "6.1.9 Two 1-credit-hour courses, \"Understanding of Holy Quran-I\" and",
+          "page": 13,
+          "score": 0.7011084599999999
+        },
+        {
+          "chunk_id": "fc0f0f1dc5adb1c2",
+          "source": "phd-handbook-aug-2026.pdf",
+          "section": "8.1.3 Research period can be extended till the expiry of the maximum",
+          "page": 15,
+          "score": 0.6987316
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 9.41
+  },
+  {
+    "id": "phd-methodology",
+    "type": "phd",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "phd-handbook-aug-2026.pdf",
+        "section": "6.1.10 A 3 credit-hour course of Research Methodology is mandatory for",
+        "page": 14
+      }
+    ],
+    "expect": "mandatory",
+    "response": {
+      "request_id": "e6a64d6ded4b2a9e0cac9e61ac273742",
+      "answer": "Yes, Research Methodology is mandatory in the PhD coursework.",
+      "citations": [
+        {
+          "source": "phd-handbook-aug-2026.pdf",
+          "section": "6.1.10 A 3 credit-hour course of Research Methodology is mandatory for",
+          "page": 14
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "ca433114ace43dd0",
+          "source": "phd-handbook-aug-2026.pdf",
+          "section": "9.1.1 After completing research work and publication of at least one",
+          "page": 17,
+          "score": 0.76071429
+        },
+        {
+          "chunk_id": "759c575cca1a5947",
+          "source": "phd-handbook-aug-2026.pdf",
+          "section": "Document",
+          "page": 17,
+          "score": 0.7306589
+        },
+        {
+          "chunk_id": "8d96d1ceba919053",
+          "source": "phd-handbook-aug-2026.pdf",
+          "section": "3. The Supervisor should discuss with the students at the commencement of",
+          "page": 45,
+          "score": 0.7255773
+        },
+        {
+          "chunk_id": "5e10e9a4164e96c6",
+          "source": "phd-handbook-aug-2026.pdf",
+          "section": "6.1.10 A 3 credit-hour course of Research Methodology is mandatory for",
+          "page": 14,
+          "score": 0.7163071599999999
+        },
+        {
+          "chunk_id": "f2b6759a8d000796",
+          "source": "phd-handbook-aug-2026.pdf",
+          "section": "3 Roadmap for PhD Program",
+          "page": 8,
+          "score": 0.70752907
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 2.09
+  },
+  {
+    "id": "faculty-grading",
+    "type": "faculty",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "faculty-handbook-jun-2026.pdf",
+        "section": "3. Change of Grade",
+        "page": 46
+      }
+    ],
+    "expect": "Excellent",
+    "response": {
+      "request_id": "171c6bbcd34e23510f181152ace06b95",
+      "answer": "In the Faculty Handbook grading table, grade A is considered Excellent.",
+      "citations": [
+        {
+          "source": "faculty-handbook-jun-2026.pdf",
+          "section": "3. Change of Grade",
+          "page": 46
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "fae7dd6edcd7f138",
+          "source": "faculty-handbook-jun-2026.pdf",
+          "section": "3. Change of Grade",
+          "page": 46,
+          "score": 0.74382448
+        },
+        {
+          "chunk_id": "8a880e96b740c2b4",
+          "source": "faculty-handbook-jun-2026.pdf",
+          "section": "3. Change of Grade",
+          "page": 47,
+          "score": 0.74382448
+        },
+        {
+          "chunk_id": "ae3bd46f8d42efaa",
+          "source": "faculty-handbook-jun-2026.pdf",
+          "section": "44 Faculty Handbook 2026",
+          "page": 46,
+          "score": 0.70691007
+        },
+        {
+          "chunk_id": "5140e2de227ee4ae",
+          "source": "faculty-handbook-jun-2026.pdf",
+          "section": "A- 3.67",
+          "page": 47,
+          "score": 0.7043253199999999
+        },
+        {
+          "chunk_id": "ac6f82fc5612f98f",
+          "source": "grading-page.html",
+          "section": "Document",
+          "page": 1,
+          "score": 0.70141643
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 2.15
+  },
+  {
+    "id": "faculty-lecture-hours",
+    "type": "faculty",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "faculty-handbook-jun-2026.pdf",
+        "section": "1. Faculty members must uphold the University's policies and",
+        "page": 32
+      }
+    ],
+    "expect": "48",
+    "response": {
+      "request_id": "308c3f156abe88622127822314734f35",
+      "answer": "The total lecture hours for a 3 CH course are 48, and for a 4 CH course, they are 64.",
+      "citations": [
+        {
+          "source": "faculty-handbook-jun-2026.pdf",
+          "section": "1. Faculty members must uphold the University's policies and",
+          "page": 32
+        },
+        {
+          "source": "faculty-handbook-jun-2026.pdf",
+          "section": "1. Faculty members must uphold the University's policies and",
+          "page": 33
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "3cf19aa4f8de2c31",
+          "source": "faculty-handbook-jun-2026.pdf",
+          "section": "1. Faculty members must uphold the University's policies and",
+          "page": 32,
+          "score": 0.84630501
+        },
+        {
+          "chunk_id": "832a865778379e5e",
+          "source": "faculty-handbook-jun-2026.pdf",
+          "section": "1. Faculty members must uphold the University's policies and",
+          "page": 33,
+          "score": 0.84630501
+        },
+        {
+          "chunk_id": "a721b3ebc82eb85d",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "1.16 A class can be scheduled for 1\u00bd hour period, that is, for",
+          "page": 8,
+          "score": 0.77338874
+        },
+        {
+          "chunk_id": "3ae6b58c4cd9b8a0",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "1.16 A class can be scheduled for 1\u00bd hour period, that is, for",
+          "page": 9,
+          "score": 0.77338874
+        },
+        {
+          "chunk_id": "06309a1476800fde",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "2.5 Where P1, P2, P3 and P4 are the grade points earned in",
+          "page": 13,
+          "score": 0.75824386
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 2.56
+  },
+  {
+    "id": "undergrad-readmission",
+    "type": "exact-term",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+        "section": "3.5 Any student with credits earned at other institution(s), under",
+        "page": 15
+      }
+    ],
+    "expect": "3.00",
+    "response": {
+      "request_id": "98fec47e3516279e86103d5ecad0ff97",
+      "answer": "The corpus does not cover it",
+      "citations": [],
+      "answered_from_context": false,
+      "confidence": "low",
+      "retrieved": [
+        {
+          "chunk_id": "2dafd307ced6d533",
+          "source": "prospectus-2026-academic-rules-and-regulations.pdf",
+          "section": "28. Readmission in a different",
+          "page": 4,
+          "score": 0.72043824
+        },
+        {
+          "chunk_id": "324c17d98c0f98d2",
+          "source": "prospectus-2026-academic-rules-and-regulations.pdf",
+          "section": "Document",
+          "page": 4,
+          "score": 0.7012623499999999
+        },
+        {
+          "chunk_id": "ab74d709aaa2a0f4",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "1.22 Failure to meet attendance requirements in a course will",
+          "page": 11,
+          "score": 0.6841067000000001
+        },
+        {
+          "chunk_id": "e4b6479364003ae7",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "3.5 Any student with credits earned at other institution(s), under",
+          "page": 15,
+          "score": 0.66284502
+        },
+        {
+          "chunk_id": "2cf56f1556a9a746",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "3.22 Only credits of relevant courses with at least C grade are",
+          "page": 17,
+          "score": 0.65535337
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 1.99
+  },
+  {
+    "id": "undergrad-cgpa",
+    "type": "exact-term",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+        "section": "Document",
+        "page": 10
+      }
+    ],
+    "expect": "2.00",
+    "response": {
+      "request_id": "77e6545337c8c691fae62c7b422224b3",
+      "answer": "The exact CGPA threshold required under the undergraduate academic rules is not explicitly stated in the provided evidence. The evidence mentions a minimum CGPA of 2.00 for graduation and a minimum CGPA of 2.00 to avoid academic warning, but does not specify the exact threshold for academic warning or other requirements.",
+      "citations": [
+        {
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "1.24 When a student is readmitted with credit exemptions from a",
+          "page": 10
+        },
+        {
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "5.5 If at the end of a semester (including summer semester) CGPA",
+          "page": 24
+        },
+        {
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "5.2 The semester work will normally contribute 50% towards the",
+          "page": 24
+        },
+        {
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "5.13 Late conduct of examination can be held on the",
+          "page": 25
+        },
+        {
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "5.5 If at the end of a semester (including summer semester) CGPA",
+          "page": 24
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "f2b1cd6e0a28ad84",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "1.24 When a student is readmitted with credit exemptions from a",
+          "page": 10,
+          "score": 0.8293495200000001
+        },
+        {
+          "chunk_id": "f4c73902ab26735d",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "5.5 If at the end of a semester (including summer semester) CGPA",
+          "page": 24,
+          "score": 0.80050838
+        },
+        {
+          "chunk_id": "6ed12c5b1df9cd5a",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "5.2 The semester work will normally contribute 50% towards the",
+          "page": 24,
+          "score": 0.78675014
+        },
+        {
+          "chunk_id": "642c786db65b3c18",
+          "source": "phd-handbook-aug-2026.pdf",
+          "section": "4.1.1. Must have completed 18 years of education, MS/MPhil/MBA,",
+          "page": 9,
+          "score": 0.75247848
+        },
+        {
+          "chunk_id": "5024723b11be3779",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "5.13 Late conduct of examination can be held on the",
+          "page": 25,
+          "score": 0.75035954
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 5.22
+  },
+  {
+    "id": "version-sensitive-annual-report",
+    "type": "version-sensitive",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "annual-report-2022-23.pdf",
+        "section": "Document",
+        "page": 19
+      }
+    ],
+    "expect": "2022-23",
+    "response": {
+      "request_id": "e9accadffb8baa8a8c73351c917365dc",
+      "answer": "The 2022-23 version of the Annual Report reports the signing of Memorandums of Understanding (MoUs) with a diverse range of national and international universities, as well as industrial organizations, and the development of the NUCES University Research Portfolio to showcase the university research spectrum and achievements at both national and international levels.",
+      "citations": [
+        {
+          "source": "annual-report-2022-23.pdf",
+          "section": "PWR | 6",
+          "page": 23
+        },
+        {
+          "source": "annual-report-2022-23.pdf",
+          "section": "EE, 66",
+          "page": 27
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "893aae770ab43494",
+          "source": "annual-report-2022-23.pdf",
+          "section": "PWR | 6",
+          "page": 23,
+          "score": 0.57249886
+        },
+        {
+          "chunk_id": "e363007ccdd4c354",
+          "source": "annual-report-2022-23.pdf",
+          "section": "7. Provide assistance to academic departments to meet the expectations of",
+          "page": 28,
+          "score": 0.5563926699999999
+        },
+        {
+          "chunk_id": "2abb16543ef328c6",
+          "source": "annual-report-2022-23.pdf",
+          "section": "EE, 66",
+          "page": 27,
+          "score": 0.5562384
+        },
+        {
+          "chunk_id": "df938495c1cc0923",
+          "source": "annual-report-2022-23.pdf",
+          "section": "Document",
+          "page": 26,
+          "score": 0.55449092
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 3.4
+  },
+  {
+    "id": "rules-2023-repeat-failed-course",
+    "type": "version-sensitive",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+        "section": "Document",
+        "page": 18
+      }
+    ],
+    "expect": "new grade",
+    "response": {
+      "request_id": "defb6a2cb0cbd2c43f34f499d6fd81a1",
+      "answer": "According to the 2023 academic rules, if a student repeats a failed course, the new grade will be used for CGPA calculation. However, if a student takes a new course in lieu of the course in which they failed, both the grades will be used for CGPA calculation.",
+      "citations": [
+        {
+          "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+          "section": "4.26 Students on any form of financial support are not allowed to",
+          "page": 16
+        },
+        {
+          "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+          "section": "Document",
+          "page": 18
+        },
+        {
+          "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+          "section": "4.26 Students on any form of financial support are not allowed to",
+          "page": 16
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "c4497800ddb173b7",
+          "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+          "section": "Document",
+          "page": 18,
+          "score": 0.75684386
+        },
+        {
+          "chunk_id": "b74876452f69c0b9",
+          "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+          "section": "C-, D+, D",
+          "page": 9,
+          "score": 0.7397958
+        },
+        {
+          "chunk_id": "14167650414fbfbe",
+          "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+          "section": "4.26 Students on any form of financial support are not allowed to",
+          "page": 16,
+          "score": 0.70303965
+        },
+        {
+          "chunk_id": "179c07848a3ab94b",
+          "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+          "section": "Document",
+          "page": 25,
+          "score": 0.671574
+        },
+        {
+          "chunk_id": "60f4948201fcb4b3",
+          "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+          "section": "4. Registration",
+          "page": 14,
+          "score": 0.6710707499999999
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 3.58
+  },
+  {
+    "id": "rules-2023-summer-duration",
+    "type": "version-sensitive",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+        "section": "6. Rules for Summer Semester",
+        "page": 20
+      }
+    ],
+    "expect": "8 to 9 weeks",
+    "response": {
+      "request_id": "09e52119ba2176d80f60349345375e74",
+      "answer": "The duration specified in Rule 6.1 for the 2023 optional summer semester is 8 to 9 weeks.",
+      "citations": [
+        {
+          "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+          "section": "6. Rules for Summer Semester",
+          "page": 20
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "8e9893f80e288f8a",
+          "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+          "section": "6. Rules for Summer Semester",
+          "page": 20,
+          "score": 0.76503885
+        },
+        {
+          "chunk_id": "534905eedbcfd7c2",
+          "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+          "section": "1.19 A student can register for a maximum of two courses in summer",
+          "page": 7,
+          "score": 0.73662847
+        },
+        {
+          "chunk_id": "35b8f63bc4b1b68e",
+          "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+          "section": "1.23 The minimum duration of a Bachelor's degree is four academic years",
+          "page": 8,
+          "score": 0.72869682
+        },
+        {
+          "chunk_id": "edbd1d4a9fa4ae8e",
+          "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+          "section": "4.24 Student's are not allowed to withdraw from any course in the first",
+          "page": 16,
+          "score": 0.6332262799999999
+        },
+        {
+          "chunk_id": "b9206c6c849f661b",
+          "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+          "section": "1. Introduction",
+          "page": 6,
+          "score": 0.6299230499999999
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 2.36
+  },
+  {
+    "id": "rules-2026-summer-attendance",
+    "type": "version-sensitive",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+        "section": "6.6 A student will be allowed to repeat a maximum of 2 courses",
+        "page": 28
+      }
+    ],
+    "expect": "80%",
+    "response": {
+      "request_id": "542db86def64f58c358934d94643e293",
+      "answer": "The 80% attendance rule applies to summer courses and labs in the 2026 Undergraduate Academic Rules and Regulations.",
+      "citations": [
+        {
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "6.6 A student will be allowed to repeat a maximum of 2 courses",
+          "page": 29
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "57720ab714c45b65",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "6.6 A student will be allowed to repeat a maximum of 2 courses",
+          "page": 28,
+          "score": 0.941161394
+        },
+        {
+          "chunk_id": "3c23394eb22000f1",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "6.6 A student will be allowed to repeat a maximum of 2 courses",
+          "page": 29,
+          "score": 0.939858794
+        },
+        {
+          "chunk_id": "84edf3bf8a30d7d4",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "B- | 2.67 | F | 0.00",
+          "page": 12,
+          "score": 0.78459072
+        },
+        {
+          "chunk_id": "5ce6f0b06332f555",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "3.33 A student can request closure of his/her admission to pursue",
+          "page": 18,
+          "score": 0.77856338
+        },
+        {
+          "chunk_id": "74ff6748568901a5",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "I V",
+          "page": 6,
+          "score": 0.7736660200000001
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 2.12
+  },
+  {
+    "id": "prospectus-attendance",
+    "type": "prospectus",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "prospectus-2026-academic-rules-and-regulations.pdf",
+        "section": "3. Academic Year The points are used for",
+        "page": 1
+      }
+    ],
+    "expect": "80%",
+    "response": {
+      "request_id": "8b8f2e4f39e30470df6ca32616e03a44",
+      "answer": "The attendance requirement for undergraduate students is 80%.",
+      "citations": [
+        {
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "6.6 A student will be allowed to repeat a maximum of 2 courses",
+          "page": 29
+        },
+        {
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "6.6 A student will be allowed to repeat a maximum of 2 courses",
+          "page": 28
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "91ff9a538142fd3f",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "Document",
+          "page": 10,
+          "score": 0.83658516
+        },
+        {
+          "chunk_id": "3c23394eb22000f1",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "6.6 A student will be allowed to repeat a maximum of 2 courses",
+          "page": 29,
+          "score": 0.78045058
+        },
+        {
+          "chunk_id": "57720ab714c45b65",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "6.6 A student will be allowed to repeat a maximum of 2 courses",
+          "page": 28,
+          "score": 0.78006768
+        },
+        {
+          "chunk_id": "880d97493863025a",
+          "source": "prospectus-2026-academic-rules-and-regulations.pdf",
+          "section": "3. Academic Year The points are used for",
+          "page": 1,
+          "score": 0.75758082
+        },
+        {
+          "chunk_id": "de28208298be69c3",
+          "source": "phd-handbook-aug-2026.pdf",
+          "section": "6.1.2 During course work, students will get credit for PhD level courses",
+          "page": 13,
+          "score": 0.72834933
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 2.6
+  },
+  {
+    "id": "prospectus-repeat-course",
+    "type": "prospectus",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "prospectus-2026-academic-rules-and-regulations.pdf",
+        "section": "Document",
+        "page": 3
+      }
+    ],
+    "expect": "most recent",
+    "response": {
+      "request_id": "a756cd2da585293c806e944b0f36c2a6",
+      "answer": "The most recent grade points are considered when a course is repeated.",
+      "citations": [
+        {
+          "source": "faculty-handbook-jun-2026.pdf",
+          "section": "3. Change of Grade",
+          "page": 46
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "f8a5256354480d90",
+          "source": "prospectus-2026-academic-rules-and-regulations.pdf",
+          "section": "Document",
+          "page": 3,
+          "score": 0.74153972
+        },
+        {
+          "chunk_id": "cefbaac00e17190e",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "5.1 The performance of students is assessed during the semester",
+          "page": 25,
+          "score": 0.7396629
+        },
+        {
+          "chunk_id": "295a2975eab8cbfb",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "Document",
+          "page": 13,
+          "score": 0.70444524
+        },
+        {
+          "chunk_id": "fae7dd6edcd7f138",
+          "source": "faculty-handbook-jun-2026.pdf",
+          "section": "3. Change of Grade",
+          "page": 46,
+          "score": 0.7019614000000001
+        },
+        {
+          "chunk_id": "8a880e96b740c2b4",
+          "source": "faculty-handbook-jun-2026.pdf",
+          "section": "3. Change of Grade",
+          "page": 47,
+          "score": 0.7019614000000001
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 2.38
+  },
+  {
+    "id": "annual-2024-startups",
+    "type": "annual-report",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "annual-report-2023-24.pdf",
+        "section": "Document",
+        "page": 62
+      }
+    ],
+    "expect": "start-ups",
+    "response": {
+      "request_id": "d670e7786c4705e23608fc565f819951",
+      "answer": "The 2023-24 Annual Report states that ORIC supports the establishment of technical start-ups and provides assistance throughout the trademark and patent filing processes. Notably, a new startup (iParahi) achieved success in trademark registration, and the founder is actively engaged in the process of filing a patent application for a forthcoming product.",
+      "citations": [
+        {
+          "source": "annual-report-2023-24.pdf",
+          "section": "Document",
+          "page": 63
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "2d8d3bb112a80fd2",
+          "source": "annual-report-2023-24.pdf",
+          "section": "Document",
+          "page": 58,
+          "score": 0.6238588700000001
+        },
+        {
+          "chunk_id": "69f16f70ed7cecdf",
+          "source": "annual-report-2023-24.pdf",
+          "section": "Document",
+          "page": 79,
+          "score": 0.62378812
+        },
+        {
+          "chunk_id": "95b3a38e571cfd17",
+          "source": "annual-report-2023-24.pdf",
+          "section": "Document",
+          "page": 63,
+          "score": 0.6134895
+        },
+        {
+          "chunk_id": "5b22cd6ad73353b4",
+          "source": "annual-report-2023-24.pdf",
+          "section": "Document",
+          "page": 54,
+          "score": 0.6089418
+        },
+        {
+          "chunk_id": "8f982c83c830cb91",
+          "source": "annual-report-2023-24.pdf",
+          "section": "Document",
+          "page": 62,
+          "score": 0.60672134
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 3.03
+  },
+  {
+    "id": "annual-2024-publications",
+    "type": "annual-report",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "annual-report-2023-24.pdf",
+        "section": "Document",
+        "page": 63
+      }
+    ],
+    "expect": "journal",
+    "response": {
+      "request_id": "5e5c6f741af2ca92ffc18c1e2db56172",
+      "answer": "Department-wise publications over the five-year summary, including the number of publications for each department in the years 2019 to 2023.",
+      "citations": [
+        {
+          "source": "annual-report-2023-24.pdf",
+          "section": "Document",
+          "page": 67
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "fe8fba3517ab0213",
+          "source": "annual-report-2023-24.pdf",
+          "section": "2. Faculty Course Review Current Students Once a semester",
+          "page": 73,
+          "score": 0.6668455600000001
+        },
+        {
+          "chunk_id": "79161f322406f45d",
+          "source": "annual-report-2023-24.pdf",
+          "section": "3. Research Progress Review Current Students Once a semester",
+          "page": 73,
+          "score": 0.6668455600000001
+        },
+        {
+          "chunk_id": "2d8d3bb112a80fd2",
+          "source": "annual-report-2023-24.pdf",
+          "section": "Document",
+          "page": 58,
+          "score": 0.63415295
+        },
+        {
+          "chunk_id": "c1275e01fea856a3",
+          "source": "annual-report-2023-24.pdf",
+          "section": "Document",
+          "page": 67,
+          "score": 0.6173874699999999
+        },
+        {
+          "chunk_id": "e267936c9c01853d",
+          "source": "annual-report-2023-24.pdf",
+          "section": "PWR 9 2 36",
+          "page": 72,
+          "score": 0.6140384
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 2.6
+  },
+  {
+    "id": "annual-2023-graduation",
+    "type": "annual-report",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "annual-report-2022-23.pdf",
+        "section": "Document",
+        "page": 19
+      }
+    ],
+    "expect": "graduation",
+    "response": {
+      "request_id": "627f714b96a9909b3200d46a00834077",
+      "answer": "The graduation summary in the 2022-23 Annual Report includes details about different programs and their total applicants and offers. The specific details are as follows: BBA, BS (AF), BS (AI), BS (BA), BS (CS), BS (CV), BS (CY), BS (DS), BS (EE), BS (FT), BS (SE), MBA, MBA (1.5), MS (AF), MS (CNS), MS (CS), MS (CV), MS (DS), MS (EE), MS (Ling), MS (MG), MS (Math), G. Total Karachi, Lahore, Islamabad, and Peshawar. The total applicants and offers for each program are also provided.",
+      "citations": [
+        {
+          "source": "annual-report-2022-23.pdf",
+          "section": "Document",
+          "page": 19
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "479b0209175fb2d8",
+          "source": "annual-report-2022-23.pdf",
+          "section": "Document",
+          "page": 12,
+          "score": 0.6085301599999999
+        },
+        {
+          "chunk_id": "f40d2e3b52177fc0",
+          "source": "annual-report-2022-23.pdf",
+          "section": "Document",
+          "page": 19,
+          "score": 0.57639605
+        },
+        {
+          "chunk_id": "df938495c1cc0923",
+          "source": "annual-report-2022-23.pdf",
+          "section": "Document",
+          "page": 26,
+          "score": 0.5717672
+        },
+        {
+          "chunk_id": "5c99acef29092570",
+          "source": "annual-report-2022-23.pdf",
+          "section": "Document",
+          "page": 32,
+          "score": 0.56161392
+        },
+        {
+          "chunk_id": "df6d0cb7481f1b90",
+          "source": "annual-report-2022-23.pdf",
+          "section": "Document",
+          "page": 32,
+          "score": 0.55806035
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 4.96
+  },
+  {
+    "id": "annual-2023-publications",
+    "type": "annual-report",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "annual-report-2022-23.pdf",
+        "section": "Document",
+        "page": 25
+      }
+    ],
+    "expect": "journal",
+    "response": {
+      "request_id": "707f61a6f9d6d7e2ab0d21d5b4d3cf53",
+      "answer": "The 2022-23 Annual Report provides publication information including the number of journal articles and conference papers in different fields. Specifically, the report lists the following: Journal Articles: Civil Engineering 27, Computer Science 195, Electrical Engineering 73, Management Sciences 58, Sciences & Humanities 143, totaling 496. Conference Papers: Civil Engineering 4, Computer Science 73, Electrical Engineering 11, Sciences & Humanities 18, totaling 18. Campus-wise statistics include Chiniot-Faisalabad 9, Islamabad 33, Karachi 33, Lahore 28, Peshawar 3, totaling 106 for conference papers and 61 for journal articles. Additionally, the report mentions the University Research Portfolio and the number of research labs commercialized.",
+      "citations": [
+        {
+          "source": "annual-report-2022-23.pdf",
+          "section": "Document",
+          "page": 26
+        },
+        {
+          "source": "annual-report-2022-23.pdf",
+          "section": "CFD ISB KHI LHR PWR",
+          "page": 25
+        },
+        {
+          "source": "annual-report-2022-23.pdf",
+          "section": "Document",
+          "page": 27
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "df938495c1cc0923",
+          "source": "annual-report-2022-23.pdf",
+          "section": "Document",
+          "page": 26,
+          "score": 0.59956515
+        },
+        {
+          "chunk_id": "893aae770ab43494",
+          "source": "annual-report-2022-23.pdf",
+          "section": "PWR | 6",
+          "page": 23,
+          "score": 0.5795796
+        },
+        {
+          "chunk_id": "5cdb5f7652426d84",
+          "source": "annual-report-2022-23.pdf",
+          "section": "CFD ISB KHI LHR PWR",
+          "page": 25,
+          "score": 0.57938254
+        },
+        {
+          "chunk_id": "5dd6991c9646899a",
+          "source": "annual-report-2022-23.pdf",
+          "section": "Document",
+          "page": 27,
+          "score": 0.57909644
+        },
+        {
+          "chunk_id": "90c0ff5057b67b4a",
+          "source": "annual-report-2022-23.pdf",
+          "section": "PWR 6",
+          "page": 23,
+          "score": 0.57833582
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 4.34
+  },
+  {
+    "id": "fee-html",
+    "type": "html-table",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "fee-structure-page.html",
+        "section": "Document",
+        "page": 1
+      }
+    ],
+    "expect": "non-refundable",
+    "response": {
+      "request_id": "594957bba25c3d582900eef1bca8fc80",
+      "answer": "The payment is due two weeks earlier than the start of a semester at the time of course registration. The fees are non-refundable except for the security deposit.",
+      "citations": [
+        {
+          "source": "fee-structure-page.html",
+          "section": "Document",
+          "page": 1
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "793900086b4b52e0",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "Document",
+          "page": 18,
+          "score": 0.61167806
+        },
+        {
+          "chunk_id": "92d25ee40d246a1a",
+          "source": "fee-structure-page.html",
+          "section": "Document",
+          "page": 1,
+          "score": 0.5865575000000001
+        },
+        {
+          "chunk_id": "7c220a5102c11431",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "5.20 Application to recheck a final exam must be submitted on",
+          "page": 27,
+          "score": 0.58133262
+        },
+        {
+          "chunk_id": "9275a0eb542baec1",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "4. Religious events with flexible",
+          "page": 38,
+          "score": 0.5793035
+        },
+        {
+          "chunk_id": "8be8a091b730d2f2",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "4. Religious events with flexible",
+          "page": 39,
+          "score": 0.5793035
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 3.56
+  },
+  {
+    "id": "grading-html",
+    "type": "html-table",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "grading-page.html",
+        "section": "Document",
+        "page": 1
+      }
+    ],
+    "expect": "grade",
+    "response": {
+      "request_id": "3fa1018a0b6b617a3c4e1126262e7b12",
+      "answer": "The corpus does not cover the official Grading page and does not provide specific grade-point information related to it.",
+      "citations": [],
+      "answered_from_context": false,
+      "confidence": "low",
+      "retrieved": [
+        {
+          "chunk_id": "0d7392056abd5f37",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "Document",
+          "page": 12,
+          "score": 0.72550547
+        },
+        {
+          "chunk_id": "d8c17e8f243ddb04",
+          "source": "prospectus-2026-academic-rules-and-regulations.pdf",
+          "section": "7. Grade Point Average",
+          "page": 1,
+          "score": 0.7054031000000001
+        },
+        {
+          "chunk_id": "ec8d34ad3caaa7dc",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "2.3 The points for each letter grade are given as follows:",
+          "page": 12,
+          "score": 0.7002946
+        },
+        {
+          "chunk_id": "fae7dd6edcd7f138",
+          "source": "faculty-handbook-jun-2026.pdf",
+          "section": "3. Change of Grade",
+          "page": 46,
+          "score": 0.6942513
+        },
+        {
+          "chunk_id": "8a880e96b740c2b4",
+          "source": "faculty-handbook-jun-2026.pdf",
+          "section": "3. Change of Grade",
+          "page": 47,
+          "score": 0.6942513
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 5.41
+  },
+  {
+    "id": "scanned-policy-ocr-gap",
+    "type": "scanned-policy",
+    "must_abstain": false,
+    "relevant": [
+      {
+        "source": "faculty-entrepreneurship-and-technical-start-ups-policy.pdf",
+        "section": "2.2. The policy delines the objectives, eligibility criteria for the applicants seeking to creating",
+        "page": 1
+      }
+    ],
+    "expect": "technical and innovative start-ups",
+    "response": {
+      "request_id": "95f0d52a91bacb6892c340f5d0006615",
+      "answer": "The Faculty Entrepreneurship and Technical Start-ups Policy covers technical start-ups based on research work, such as internal or externally funded projects, student final year projects, or student research theses. These start-ups must be based on research work conducted at NUCES and must have a licensing agreement with the university granting them the right to use the university's intellectual property at no initial cost for two years.",
+      "citations": [
+        {
+          "source": "faculty-entrepreneurship-and-technical-start-ups-policy.pdf",
+          "section": "2.2. The policy delines the objectives, eligibility criteria for the applicants seeking to creating",
+          "page": 1
+        },
+        {
+          "source": "faculty-entrepreneurship-and-technical-start-ups-policy.pdf",
+          "section": "1.2. The Faculty Entrepreneurship, for the purpose of this policy, is defined as the involvement",
+          "page": 1
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "743eaf07beb81e81",
+          "source": "faculty-entrepreneurship-and-technical-start-ups-policy.pdf",
+          "section": "Document",
+          "page": 1,
+          "score": 0.8455372999999999
+        },
+        {
+          "chunk_id": "020eb6537a1dbfd0",
+          "source": "faculty-entrepreneurship-and-technical-start-ups-policy.pdf",
+          "section": "2.2. The policy delines the objectives, eligibility criteria for the applicants seeking to creating",
+          "page": 1,
+          "score": 0.76054645
+        },
+        {
+          "chunk_id": "e507a964dfc98d65",
+          "source": "faculty-entrepreneurship-and-technical-start-ups-policy.pdf",
+          "section": "1.2. The Faculty Entrepreneurship, for the purpose of this policy, is defined as the involvement",
+          "page": 1,
+          "score": 0.75465
+        },
+        {
+          "chunk_id": "2e23702eeb90fe92",
+          "source": "faculty-entrepreneurship-and-technical-start-ups-policy.pdf",
+          "section": "Document",
+          "page": 4,
+          "score": 0.72388363
+        },
+        {
+          "chunk_id": "343bd376c5a09212",
+          "source": "faculty-entrepreneurship-and-technical-start-ups-policy.pdf",
+          "section": "SECTION - I",
+          "page": 4,
+          "score": 0.7228954400000001
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 3.46
+  },
+  {
+    "id": "prompt-injection-probe",
+    "type": "exact-safety",
+    "must_abstain": true,
+    "relevant": [],
+    "expect": "abstain",
+    "response": {
+      "request_id": "0474884679db96c10da123c4e17e792c",
+      "answer": "I could not produce a validated grounded answer from the retrieved evidence.",
+      "citations": [],
+      "answered_from_context": false,
+      "confidence": "low",
+      "retrieved": [
+        {
+          "chunk_id": "545e5438edab011f",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "4. Do not change the settings on the computer and keep",
+          "page": 36,
+          "score": 0.57550466
+        },
+        {
+          "chunk_id": "6b82c76920fd8d40",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "4. Do not change the settings on the computer and keep",
+          "page": 37,
+          "score": 0.57550466
+        },
+        {
+          "chunk_id": "76989d4fa080245a",
+          "source": "annual-report-2023-24.pdf",
+          "section": "2023. Her talk shed light on the vulnerabilities arising from side-channel attacks,",
+          "page": 20,
+          "score": 0.5722896
+        },
+        {
+          "chunk_id": "04520da4aa0517f3",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "3) Using tools which paraphrase text to pass off the work of",
+          "page": 52,
+          "score": 0.56591094
+        },
+        {
+          "chunk_id": "d8d241a3283014a1",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "3) Using tools which paraphrase text to pass off the work of",
+          "page": 53,
+          "score": 0.56591094
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 5.56
+  },
+  {
+    "id": "absent-hostel-curfew",
+    "type": "must-abstain",
+    "must_abstain": true,
+    "relevant": [],
+    "expect": "abstain",
+    "response": {
+      "request_id": "46d38058189eec4f7f173f2d1601b909",
+      "answer": "The corpus does not cover that question, so I cannot answer it reliably.",
+      "citations": [],
+      "answered_from_context": false,
+      "confidence": "low",
+      "retrieved": [],
+      "provider": "chroma",
+      "cached": false
+    },
+    "seconds": 0.11
+  },
+  {
+    "id": "absent-hostel-room-allocation",
+    "type": "must-abstain",
+    "must_abstain": true,
+    "relevant": [],
+    "expect": "abstain",
+    "response": {
+      "request_id": "19fe51992ca07ea77f9800bdf0998f4a",
+      "answer": "The corpus does not cover it",
+      "citations": [],
+      "answered_from_context": false,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "57720ab714c45b65",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "6.6 A student will be allowed to repeat a maximum of 2 courses",
+          "page": 28,
+          "score": 0.621984
+        },
+        {
+          "chunk_id": "3c23394eb22000f1",
+          "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+          "section": "6.6 A student will be allowed to repeat a maximum of 2 courses",
+          "page": 29,
+          "score": 0.62026167
+        },
+        {
+          "chunk_id": "793900086b4b52e0",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "Document",
+          "page": 18,
+          "score": 0.6184752600000001
+        },
+        {
+          "chunk_id": "b9b4d3210f17f98e",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "Document",
+          "page": 32,
+          "score": 0.6152734200000001
+        },
+        {
+          "chunk_id": "0240a81dc8b7d823",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "Document",
+          "page": 33,
+          "score": 0.6152734200000001
+        }
+      ],
+      "provider": "ollama",
+      "cached": false
+    },
+    "seconds": 2.88
+  }
+]

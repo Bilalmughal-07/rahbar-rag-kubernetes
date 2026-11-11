@@ -1,0 +1,106 @@
+[
+  {
+    "request_id": "b81ffcac8c7280beaaabfc82c6c044fb",
+    "answer": "The total number of credit hours a student must complete is 42.",
+    "citations": [
+      {
+        "source": "phd-handbook-aug-2026.pdf",
+        "section": "3 Roadmap for PhD Program",
+        "page": 8
+      }
+    ],
+    "answered_from_context": true,
+    "confidence": "high",
+    "retrieved": [
+      {
+        "chunk_id": "f2b6759a8d000796",
+        "source": "phd-handbook-aug-2026.pdf",
+        "section": "3 Roadmap for PhD Program",
+        "page": 8,
+        "score": 0.83845168
+      },
+      {
+        "chunk_id": "84b0abc40d428bc1",
+        "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+        "section": "Document",
+        "page": 32,
+        "score": 0.7692440700000001
+      },
+      {
+        "chunk_id": "5e10e9a4164e96c6",
+        "source": "phd-handbook-aug-2026.pdf",
+        "section": "6.1.10 A 3 credit-hour course of Research Methodology is mandatory for",
+        "page": 14,
+        "score": 0.76911974
+      },
+      {
+        "chunk_id": "10677317ca295e3b",
+        "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+        "section": "3.7 Exemption of courses studied at another University cannot be",
+        "page": 14,
+        "score": 0.7655046
+      },
+      {
+        "chunk_id": "152337af52126d4d",
+        "source": "prospectus-2026-academic-rules-and-regulations.pdf",
+        "section": "A+ 4.00 B- 2.67",
+        "page": 1,
+        "score": 0.74391913
+      }
+    ],
+    "provider": "ollama",
+    "cached": false
+  },
+  {
+    "request_id": "029d1ffd88dd367147d14e67cc339965",
+    "answer": "The total number of credit hours a student must complete is 42.",
+    "citations": [
+      {
+        "source": "phd-handbook-aug-2026.pdf",
+        "section": "3 Roadmap for PhD Program",
+        "page": 8
+      }
+    ],
+    "answered_from_context": true,
+    "confidence": "high",
+    "retrieved": [
+      {
+        "chunk_id": "f2b6759a8d000796",
+        "source": "phd-handbook-aug-2026.pdf",
+        "section": "3 Roadmap for PhD Program",
+        "page": 8,
+        "score": 0.83845168
+      },
+      {
+        "chunk_id": "84b0abc40d428bc1",
+        "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+        "section": "Document",
+        "page": 32,
+        "score": 0.7692440700000001
+      },
+      {
+        "chunk_id": "5e10e9a4164e96c6",
+        "source": "phd-handbook-aug-2026.pdf",
+        "section": "6.1.10 A 3 credit-hour course of Research Methodology is mandatory for",
+        "page": 14,
+        "score": 0.76911974
+      },
+      {
+        "chunk_id": "10677317ca295e3b",
+        "source": "undergraduate-academic-rules-handbook-jun-2026.pdf",
+        "section": "3.7 Exemption of courses studied at another University cannot be",
+        "page": 14,
+        "score": 0.7655046
+      },
+      {
+        "chunk_id": "152337af52126d4d",
+        "source": "prospectus-2026-academic-rules-and-regulations.pdf",
+        "section": "A+ 4.00 B- 2.67",
+        "page": 1,
+        "score": 0.74391913
+      }
+    ],
+    "provider": "ollama",
+    "cached": true
+  }
+]

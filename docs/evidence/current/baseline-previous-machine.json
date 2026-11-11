@@ -1,0 +1,181 @@
+{
+  "recall_at_3": 0.5263157894736842,
+  "recall_at_5": 0.6842105263157895,
+  "citation_validity": 1.0,
+  "abstention_correctness": 1.0,
+  "recall_at_5_by_type": {
+    "annual-report": 0.25,
+    "exact-safety": null,
+    "faculty": 1.0,
+    "html-table": 0.5,
+    "phd": 1.0,
+    "prospectus": 1.0,
+    "scanned-policy": 1.0,
+    "undergraduate": 0.5,
+    "version-sensitive": 0.75
+  },
+  "per_question": [
+    {
+      "id": "phd-roadmap",
+      "type": "phd",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "citation_validity": 1.0,
+      "abstention_correct": null
+    },
+    {
+      "id": "phd-methodology",
+      "type": "phd",
+      "recall_at_3": 0.0,
+      "recall_at_5": 1.0,
+      "citation_validity": null,
+      "abstention_correct": null
+    },
+    {
+      "id": "faculty-grading",
+      "type": "faculty",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "citation_validity": 1.0,
+      "abstention_correct": null
+    },
+    {
+      "id": "faculty-lecture-hours",
+      "type": "faculty",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "citation_validity": null,
+      "abstention_correct": null
+    },
+    {
+      "id": "undergrad-readmission",
+      "type": "undergraduate",
+      "recall_at_3": 0.0,
+      "recall_at_5": 1.0,
+      "citation_validity": 1.0,
+      "abstention_correct": null
+    },
+    {
+      "id": "undergrad-cgpa",
+      "type": "undergraduate",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "citation_validity": null,
+      "abstention_correct": null
+    },
+    {
+      "id": "version-sensitive-annual-report",
+      "type": "version-sensitive",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "citation_validity": null,
+      "abstention_correct": null
+    },
+    {
+      "id": "rules-2023-repeat-failed-course",
+      "type": "version-sensitive",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "citation_validity": 1.0,
+      "abstention_correct": null
+    },
+    {
+      "id": "rules-2023-summer-duration",
+      "type": "version-sensitive",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "citation_validity": 1.0,
+      "abstention_correct": null
+    },
+    {
+      "id": "rules-2026-summer-attendance",
+      "type": "version-sensitive",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "citation_validity": 1.0,
+      "abstention_correct": null
+    },
+    {
+      "id": "prospectus-attendance",
+      "type": "prospectus",
+      "recall_at_3": 0.0,
+      "recall_at_5": 1.0,
+      "citation_validity": 1.0,
+      "abstention_correct": null
+    },
+    {
+      "id": "prospectus-repeat-course",
+      "type": "prospectus",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "citation_validity": 1.0,
+      "abstention_correct": null
+    },
+    {
+      "id": "annual-2024-startups",
+      "type": "annual-report",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "citation_validity": null,
+      "abstention_correct": null
+    },
+    {
+      "id": "annual-2024-publications",
+      "type": "annual-report",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "citation_validity": 1.0,
+      "abstention_correct": null
+    },
+    {
+      "id": "annual-2023-graduation",
+      "type": "annual-report",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "citation_validity": 1.0,
+      "abstention_correct": null
+    },
+    {
+      "id": "annual-2023-publications",
+      "type": "annual-report",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "citation_validity": 1.0,
+      "abstention_correct": null
+    },
+    {
+      "id": "fee-html",
+      "type": "html-table",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "citation_validity": 1.0,
+      "abstention_correct": null
+    },
+    {
+      "id": "grading-html",
+      "type": "html-table",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "citation_validity": null,
+      "abstention_correct": null
+    },
+    {
+      "id": "scanned-policy-ocr-gap",
+      "type": "scanned-policy",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "citation_validity": 1.0,
+      "abstention_correct": null
+    },
+    {
+      "id": "prompt-injection-probe",
+      "type": "exact-safety",
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "citation_validity": null,
+      "abstention_correct": true
+    }
+  ],
+  "golden": "eval\\golden.yaml",
+  "questions": 20
+}

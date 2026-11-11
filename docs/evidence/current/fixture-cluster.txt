@@ -1,0 +1,31 @@
+﻿NAME                                  READY   STATUS        RESTARTS   AGE
+pod/api-5868d6546f-h7xfw              1/1     Running       0          7s
+pod/api-5868d6546f-jqnzp              1/1     Running       0          24s
+pod/api-5868d6546f-l5rh7              1/1     Running       0          13s
+pod/api-d5f685c7f-9wb2h               1/1     Terminating   0          23m
+pod/api-d5f685c7f-f8dgd               1/1     Terminating   0          24m
+pod/api-d5f685c7f-j76rc               1/1     Terminating   0          23m
+pod/chroma-0                          1/1     Running       0          39m
+pod/corpus-loader                     1/1     Running       0          39m
+pod/fixture-security-verified-nkg4w   0/1     Completed     0          24m
+pod/indexer-nc2sh                     0/1     Completed     0          36m
+pod/pin-mismatch                      0/1     Running       0          26m
+pod/redis-7db56bbb9b-z698h            1/1     Running       0          39m
+pod/ui-557f85f4f-j72qd                1/1     Running       0          24m
+
+NAME                                  STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+persistentvolumeclaim/corpus-data     Bound    pvc-aa691526-dd3e-48b7-812c-91b35c529eee   5Gi        RWO            standard       <unset>                 39m
+persistentvolumeclaim/data-chroma-0   Bound    pvc-147e07bc-bd64-4c91-85f0-ebf1825e4386   5Gi        RWO            standard       <unset>                 39m
+persistentvolumeclaim/redis-data      Bound    pvc-87a072af-3041-472b-bfa4-e64742450341   1Gi        RWO            standard       <unset>                 39m
+
+NAME                    READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/api     3/3     3            3           39m
+deployment.apps/redis   1/1     1            1           39m
+deployment.apps/ui      1/1     1            1           39m
+
+NAME                                  STATUS     COMPLETIONS   DURATION   AGE
+job.batch/fixture-security-verified   Complete   1/1           12s        24m
+job.batch/indexer                     Complete   1/1           7s         39m
+
+NAME                               CLASS   HOSTS          ADDRESS     PORTS   AGE
+ingress.networking.k8s.io/rahbar   nginx   rahbar.local   localhost   80      39m

@@ -1,0 +1,28 @@
+# Apply only to the isolated fixture cluster, never the main deployment.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pin-mismatch
+  namespace: rahbar
+  labels: {app: api}
+spec:
+  restartPolicy: Never
+  automountServiceAccountToken: false
+  containers:
+    - name: api
+      image: rahbar-api:dev
+      imagePullPolicy: IfNotPresent
+      envFrom: [{configMapRef: {name: rahbar-config}}]
+      env:
+        - {name: EMBED_MODEL, value: deliberately-wrong-model}
+      resources:
+        requests: {cpu: 25m, memory: 128Mi}
+        limits: {cpu: 500m, memory: 512Mi}
+      securityContext:
+        runAsNonRoot: true
+        readOnlyRootFilesystem: true
+        allowPrivilegeEscalation: false
+        capabilities: {drop: [ALL]}
+      readinessProbe:
+        httpGet: {path: /readyz, port: 8000}
+        periodSeconds: 2

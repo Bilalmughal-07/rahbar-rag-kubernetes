@@ -1,0 +1,141 @@
+{
+  "scope": "isolated collections and in-memory copies; serving index unchanged",
+  "A_extraction": {
+    "source": "faculty-entrepreneurship-and-technical-start-ups-policy.pdf",
+    "intervention": "discard OCR text on image-only pages",
+    "ocr_pages": 8,
+    "chunks_with_ocr": 29,
+    "chunks_without_ocr": 0
+  },
+  "C_retrieval": {
+    "intervention": "TOP_K=1",
+    "baseline_recall_at_5": 0.8947368421052632,
+    "broken_recall_at_5": 0.5263157894736842
+  },
+  "E_source": {
+    "intervention": "remove superseded=False filter on current-version questions",
+    "questions_retrieving_old_evidence": 5,
+    "per_question": [
+      {
+        "id": "phd-roadmap",
+        "old_passages_without_filter": []
+      },
+      {
+        "id": "phd-methodology",
+        "old_passages_without_filter": []
+      },
+      {
+        "id": "faculty-grading",
+        "old_passages_without_filter": [
+          {
+            "source_url": "https://nu.edu.pk/public/downloads/Academic-Rules-%20Undergrad-Programs.pdf",
+            "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+            "superseded": true,
+            "content_hash": "cddfe1f5e9770132e27d686abd1c2e6742ef4732f0c2f431ed514bc1691d2004",
+            "doc_version": "2023-08",
+            "page": 9,
+            "title": "undergraduate academic rules and regulations earlier official edition",
+            "section": "2.1 The Grade Point Average (GPA) provides a continuous scale for grades"
+          }
+        ]
+      },
+      {
+        "id": "faculty-lecture-hours",
+        "old_passages_without_filter": []
+      },
+      {
+        "id": "undergrad-readmission",
+        "old_passages_without_filter": [
+          {
+            "section": "3.14 A former student who has bcen on disciplinary warning shall not be",
+            "content_hash": "cddfe1f5e9770132e27d686abd1c2e6742ef4732f0c2f431ed514bc1691d2004",
+            "page": 12,
+            "title": "undergraduate academic rules and regulations earlier official edition",
+            "superseded": true,
+            "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+            "source_url": "https://nu.edu.pk/public/downloads/Academic-Rules-%20Undergrad-Programs.pdf",
+            "doc_version": "2023-08"
+          }
+        ]
+      },
+      {
+        "id": "undergrad-cgpa",
+        "old_passages_without_filter": [
+          {
+            "superseded": true,
+            "doc_version": "2023-08",
+            "content_hash": "cddfe1f5e9770132e27d686abd1c2e6742ef4732f0c2f431ed514bc1691d2004",
+            "title": "undergraduate academic rules and regulations earlier official edition",
+            "source_url": "https://nu.edu.pk/public/downloads/Academic-Rules-%20Undergrad-Programs.pdf",
+            "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+            "section": "3.23 Closure of admission results in termination of a student's studies at",
+            "page": 13
+          }
+        ]
+      },
+      {
+        "id": "prospectus-attendance",
+        "old_passages_without_filter": [
+          {
+            "title": "undergraduate academic rules and regulations earlier official edition",
+            "content_hash": "cddfe1f5e9770132e27d686abd1c2e6742ef4732f0c2f431ed514bc1691d2004",
+            "page": 7,
+            "source_url": "https://nu.edu.pk/public/downloads/Academic-Rules-%20Undergrad-Programs.pdf",
+            "superseded": true,
+            "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+            "section": "1.19 A student can register for a maximum of two courses in summer",
+            "doc_version": "2023-08"
+          }
+        ]
+      },
+      {
+        "id": "prospectus-repeat-course",
+        "old_passages_without_filter": [
+          {
+            "doc_version": "2023-08",
+            "source_url": "https://nu.edu.pk/public/downloads/Academic-Rules-%20Undergrad-Programs.pdf",
+            "page": 18,
+            "source": "undergraduate-academic-rules-and-regulations-earlier-official-edition.pdf",
+            "content_hash": "cddfe1f5e9770132e27d686abd1c2e6742ef4732f0c2f431ed514bc1691d2004",
+            "section": "Document",
+            "title": "undergraduate academic rules and regulations earlier official edition",
+            "superseded": true
+          }
+        ]
+      },
+      {
+        "id": "fee-html",
+        "old_passages_without_filter": []
+      },
+      {
+        "id": "grading-html",
+        "old_passages_without_filter": []
+      },
+      {
+        "id": "scanned-policy-ocr-gap",
+        "old_passages_without_filter": []
+      },
+      {
+        "id": "prompt-injection-probe",
+        "old_passages_without_filter": []
+      },
+      {
+        "id": "absent-hostel-curfew",
+        "old_passages_without_filter": []
+      },
+      {
+        "id": "absent-hostel-room-allocation",
+        "old_passages_without_filter": []
+      }
+    ],
+    "interpretation": "Old evidence retrieval demonstrates exposure, not proof that an answer is factually wrong."
+  },
+  "B_chunking": {
+    "intervention": "fixed 100-word windows, no overlap or section headings",
+    "collection": "rahbar-failure-fixed100-1794408123",
+    "chunks": 1453,
+    "baseline_recall_at_5": 0.8947368421052632,
+    "broken_recall_at_5": 0.5263157894736842,
+    "limitation": "Section loss contributes to this metric, which matches source and section."
+  }
+}

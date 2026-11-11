@@ -1,0 +1,22 @@
+{
+  "url": "http://localhost:8082/",
+  "questions": [
+    "How many credit hours are required in the PhD roadmap?",
+    "What is the exact nightly hostel curfew time and the fine for returning late?"
+  ],
+  "displayed_text": "How many credit hours are required in the PhD roadmap?\nFrom the documents\nconfidence: high\nprovider: ollama\ncache: hit\n\n42\n\nSOURCES\nphd-handbook-aug-2026.pdf / 3 Roadmap for PhD Program, p. 8\nRetrieved passages (5)\nrequest id 26d5974b8fdf4cacbf9fad51d72dee56\nWhat is the exact nightly hostel curfew time and the fine for returning late?\nNot covered by the documents\nconfidence: low\nprovider: chroma\ncache: miss\n\nThe corpus does not cover that question, so I cannot answer it reliably.\n\nrequest id f0a7828ed4904f15b50dc67f55ab9165",
+  "requests": [
+    {
+      "requestId": "55664.5",
+      "url": "http://localhost:8082/api/ask",
+      "method": "POST",
+      "status": 200
+    },
+    {
+      "requestId": "55664.6",
+      "url": "http://localhost:8082/api/ask",
+      "method": "POST",
+      "status": 200
+    }
+  ]
+}
