@@ -4,8 +4,10 @@ This checklist intentionally contains no fabricated external evidence. Fill in
 the run-specific values only after an authenticated GitHub/Docker Hub run.
 
 - Repository: `https://github.com/Bilalmughal-07/rahbar-rag-kubernetes`
-- Branch submitted: `dev` -> `main` pull request: pending approval and push
-- Successful CI workflow URL: pending actual GitHub run
+- Development pushed to `dev`; PR: https://github.com/Bilalmughal-07/rahbar-rag-kubernetes/pull/1
+- Actual CI run: https://github.com/Bilalmughal-07/rahbar-rag-kubernetes/actions/runs/43058515362
+  (failed on the unavailable action tag; fixed in 647e66d, rerun pending)
+- Latest head checks: use the PR checks; final main merge remains unapproved
 - Successful CD workflow URL: pending actual GitHub run
 - Docker Hub API image with exact commit SHA: pending actual publication
 - Docker Hub indexer image with exact commit SHA: pending actual publication
@@ -38,3 +40,6 @@ Local evidence already available in this repository:
   passed; this is not a GitHub Actions run
 - `docs/evidence/current/ui-grounded.png` and `ui-abstention.png`: genuine browser screenshots
 - `docs/evidence/current/trivy-*-verified.json`: actual final image scans
+
+See [submission status](../SUBMISSION-STATUS.md). Earlier no-dev/no-run
+observations refer to the initial audit before the approved development push.

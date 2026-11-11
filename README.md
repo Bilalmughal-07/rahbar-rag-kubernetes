@@ -130,5 +130,8 @@ dependencies, fixture evaluation, SHA-tagged Docker images, secrets, and the ext
 evidence checklist. The current run measured recall@3=0.684, recall@5=0.895,
 citation validity=1.0 and abstention correctness=1.0. Python 3.12 checks passed 28 tests
 with 74.41% API coverage. Genuine browser screenshots are in `docs/evidence/current/`.
-GitHub-hosted CI/CD and Docker Hub publication remain pending approved commits/pushes,
-registry secrets and owner configuration. Remote `main` is currently unprotected.
+Development is published with both history roots preserved.
+[Real CI](https://github.com/Bilalmughal-07/rahbar-rag-kubernetes/actions/runs/43058515362)
+is underway; see [submission status](docs/SUBMISSION-STATUS.md).
+Main merge, Docker Hub publication and CD require separate final approval.
+Remote `main` is currently unprotected.

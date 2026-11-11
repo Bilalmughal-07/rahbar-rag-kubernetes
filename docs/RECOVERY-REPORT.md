@@ -221,3 +221,9 @@ HPA measures API overhead while inference runs on the host. Cache threshold test
 covered only eight pairs. Package pins and saved image identities help reproduce
 the run, but transitive packages, security repositories and upstream documents can
 change over time. Registry publication by commit SHA remains an approved next step.
+
+## Authorized submission progress
+
+The earlier no-dev/no-Actions observations describe the initial audit.
+See [submission status](SUBMISSION-STATUS.md) for subsequent authorized commits,
+actual CI links, fresh verification and remaining approval/owner requirements.

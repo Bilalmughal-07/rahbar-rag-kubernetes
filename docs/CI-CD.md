@@ -100,3 +100,9 @@ blocking force-pushes and direct pushes.
    indexing remains a separate Kubernetes Job.
 4. Record only actual run URLs, Docker Hub image links, measured evaluation
    results, and SHA values in the submission evidence checklist.
+
+## Authorized submission progress
+
+The earlier no-dev/no-Actions observations describe the initial audit.
+See [submission status](SUBMISSION-STATUS.md) for subsequent authorized commits,
+actual CI links, fresh verification and remaining approval/owner requirements.

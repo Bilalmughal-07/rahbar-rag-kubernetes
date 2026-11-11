@@ -1,7 +1,8 @@
 # Git audit and contribution plan
 
-Verified 2026-11-11. No commits, pushes, pull requests, identity changes, or merges
-were performed during this audit. Fetching added remote-tracking history only.
+Initial read-only audit: 2026-11-11. No mutations occurred during that audit.
+The authorized submission phase subsequently committed and integrated dev; see
+[submission status](SUBMISSION-STATUS.md).
 
 ## Existing history
 
@@ -17,10 +18,10 @@ commit has not been pushed, so its GitHub association cannot yet be verified.
 No existing commit is attributed to Hanan. Do not invent earlier contributions.
 
 The authenticated GitHub login is `ranahananshafique` and has repository push
-permission. Repository-local user.name is `Bilalmughal-07` and user.email is
-`muhammadbilalali774@gmail.com`. Authentication does not determine authorship.
+permission. At initial audit, repository-local identity was Bilal; approved commits switched
+only local configuration to each confirmed responsible contributor. Authentication does not determine authorship.
 
-## Confirmed identities; unconfirmed authorship
+## Confirmed identities and contribution responsibilities
 
 The partners supplied these GitHub-verified commit emails on 2026-11-11.
 This is partner confirmation, not independent access to GitHub's private email settings.
@@ -49,8 +50,8 @@ only dev, running CI, and opening a PR. Main merge, registry publication and CD
 remain subject to separate explicit approval. No equal-count allocation is implied.
 
 Verification below refers to recorded full-tree recovery checks, not separately
-tested intermediate commits. This cleanup rechecks documentation and inventory;
-it does not rerun application, cluster or image tests.
+tested intermediate commits. The submission phase reran tests, coverage, builds, scans, manifests and live
+evaluation; see the submission status for actual results.
 
 ### 1. `chore(build): pin runtime dependencies and container tooling` (12 files)
 
